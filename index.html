@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title># Paolo Marcolli | Web Site </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link crossorigin="" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600">
+    <meta property="og:title" content="Depyl per un futuro migliore.">
+    <meta property="og:description" content="Vendita impianti per la depurazione dell’acqua">        
+    <meta property="og:image" content="https://paolomarcolli.github.io/trial-project-depyl/assets/img/favicon-32x32.png">        
+    <meta property="og:url" content="https://paolomarcolli.github.io/trial-project-depyl/">        
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Depyl" />
+    <meta property="og:locale" content="it_IT" />
+    <link rel="icon" href="asset/img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+        <div>
+            <img src="asset/img/favicon-32x32.png" alt="# Paolo Marcolli | Web Site" >
+        </div>
+    </div>
+    <input class="menu-btn" id="menu-btn" type="checkbox" checked="checked"/>
+    <label for="menu-btn" class="menu-icon">
+        <span class="nav-icon"></span>
+    </label>
+    <ul class="menu">
+        <li><a href="#home">Who am I ?</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#curriculum">Curriculum</a></li>
+        <li><a href="#contact">Contacts</a></li>
+    </ul>
+</header>
+    <main class="container-flex-main">
+      <div class="flexbox-left">
+      </div>
+      <article class="flexbox-main"> 
+        <section id="home">
+            <h2>Who am I ?</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque sit dignissimos fuga, repellat vel nobis! Iusto neque non obcaecati, assumenda dignissimos vel atque blanditiis ipsum. Odio obcaecati iste provident deserunt.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, illo enim quisquam suscipit a assumenda quo debitis culpa et sit dolorum quod, eos odio optio soluta? In iusto molestiae tempore.</p>
+        </section>
+        <section id="curriculum">
+            <h2>Curriculum</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptas voluptatem odit modi, qui, magni voluptatibus a nobis veniam iste incidunt tempora consequuntur illum. Sit enim temporibus suscipit. Suscipit, cum.</p>
+        </section>
+        <section id="contact">
+            <header>
+                <h2>Contact me</h2>   
+            </header>
+            <form action="inserimento_dati.php" method="post">
+                <div class="mb-3 ">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Write your message"></textarea>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-outline-light">Send Message</button>
+                </div>
+            </form>
+        </section>
+      </article>
+      <div class="flexbox-right">
+      </div>
+    </main>
+    <footer >
+        <!--<p>@Copiright 2024 Polosoft77</p>-->
+    </footer>
+</body>
+</html>
