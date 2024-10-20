@@ -169,8 +169,7 @@ article{
     }
     .flMainStructure {
         display: flex;
-        flex-direction: row;
-        align-items: stretch;
+        flex-direction: column;
         height: 100%;
      }
      
@@ -183,7 +182,7 @@ article{
      
      .flMainBox {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         width: 70%;
      }    
 }

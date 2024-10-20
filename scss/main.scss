@@ -1,3 +1,13 @@
+$background-color:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+$color: #fff;
+
+
+@mixin base-color {
+  color: $color;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+}
+
 body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -7,185 +17,198 @@ body {
 }
 
 a{
-    color: rgb(185, 183, 183);
+  //color: rgb(185, 183, 183);
+  @include base-color();    
 }
 
-.container-flex-main {
-    flex-direction: column;
-    margin:0px;
-    height: 100%;  
-} 
 article{
-    background-color: #212121;
+    @include base-color();
+    background-color:black;
     align-items: center;
     flex: 1;
-    color: #fff;
     padding: 15px;
     border: 1px dotted #ffffff91;
-}
-
-article{
     scroll-margin-top: 75px;
 }
 
-
-.flMainStructure {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    border-radius: 10px;
-    height: 100%;
- }
- 
- .flLeftSpace {
-    width: 2.5%;
- }
- .flRightSpace {
-    width: 2.5%;
- }
- 
- .flMainBox {
+/* Layout structure ( using nesting SASS syntax ) */
+.flPgContainer {
     display: flex;
     flex-direction: column;
-    width: 95%;
- }
- 
-
-.header{
-    background-color: #212121de;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-    position: fixed;    
+    align-items: center;
     width: 100%;
-    z-index: 1;
+    .flHdContainer {
+      background-color: red;
+      width: 100%;
+    }
+    .flMainStructure,
+    .flFooterStructure {
+      display: flex;
+      flex-direction: row;
+      border-radius: 10px;
+      height: 100%;
+     .flLeftSpace {
+        width: 2.5%;
+     }
+     .flRightSpace {
+        width: 2.5%;
+     }
+     .flMainSpace {
+        display: flexbox;
+        flex-direction: row;
+        width: 95%;
+        .flArticleStructure {
+          margin: 15px;
+          width: auto;
+        }
+     }   
+    } 
+    .flFooterStructure {
+      height: auto!important;
+    }   
 }
-
-.header ul{
+/* Responsive header ( using nesting SASS syntax ) */
+.header{
+  background-color: #212121de;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;    
+  width: 100%;
+  z-index: 1;
+  ul{
     margin: 0;
     padding: 0;
     list-style-type: none;
     overflow: hidden;
-}
 
-.header ul a{
-    display: block;
-    /*border-right: 1px solid red;*/
-    padding: 20px 20px;
-    text-decoration: none;
-}
-
-.header ul a:hover{
-    background-color: #181818;
-}
-
-.header .logo{
+    a
+    {
+      display: block;
+      /*border-right: 1px solid red;*/
+      padding: 20px 20px;
+      text-decoration: none;
+      &:hover
+      { 
+        background-color: #181818;
+      };
+    }    
+  }
+  .logo{
     display: flex;
     padding: 10px 10px;
     flex-direction: row;
     justify-content: start;
     float: left;  
-}
-
-.header .menu{
+  }
+  .menu{
     clear: both;
     max-height: 0;
     transition: max-height 1.2s ease-out
-}
-
-.header .menu-icon{
+  }  
+  .menu-icon{
     /*border: 1px solid red;*/
     padding: 28px 20px;
     position: relative;
     float: right;
     cursor: pointer;
-}
-
-.header .menu-icon .nav-icon{
-    background-color: #FFF;
-    display: block;
-    width: 18px;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-}
-
-.header .menu-icon .nav-icon:before,
-.header .menu-icon .nav-icon:after{
-    background-color: #FFF;
-    display: block;
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    transition: all 1.2s ease-out;
-    top: 5px;
-}   
-
-.header .menu-icon .nav-icon:before{
-    top: -5px;
-}
-
-.header .menu-btn{
+    .nav-icon
+    {
+      background-color: #FFF;
+      display: block;
+      width: 18px;
+      height: 2px;
+      position: relative;
+      transition: background-color .2s ease-out;
+      &:before,
+      &:after{
+        background-color: #FFF;
+        display: block;
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        transition: all 1.2s ease-out;
+        top: 5px;    
+      }
+      &::before{top: -5px;}
+    }    
+  }  
+  .menu-btn{
     display: none;
-}
-
-.header .menu-btn:checked ~ .menu{
-    max-height: 240px;   
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon{   
-    background-color: transparent;
-}
-.header .menu-btn:checked ~ .menu-icon .nav-icon::before{   
-    transform: rotate(-45deg);
-    top: 0px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon::after{   
-    transform: rotate(45deg);
-    top: 0px;
-}
-
-.logo{
-    color: white;
+  }  
+  .menu-btn:checked ~ .menu{
+    max-height: 240px;
+    &.menu-icon{
+      .nav-icon{
+        background-color: transparent;
+      } 
+      .nav-icon::before{
+        transform: rotate(-45deg);
+        top: 0px;
+      }
+      .nav-icon::after{
+        transform: rotate(45deg);
+        top: 0px;
+      }
+    }
+  }
+  .logo{
+    @include base-color();
     margin-top: 5px;
     text-decoration: none;
     text-transform:capitalize;
+  }
 }
 
+
+/* Media query when the screen is larger than 756px */
 @media (min-width: 48em){ 
-    .header li{
+    /* Responsive header ( using nesting SASS syntax ) */    
+    .header {
+      li{
         float: left;
-    }
-    .header li a{
-        padding: 20px 30px;
-    }
-    .header .menu{
+        a{
+          padding: 20px 30px;
+        }
+      }
+      .menu{
         clear: none;
         float: right;
         max-height: 240px;
-    }
-    .header .menu-icon{
+      }
+      .menu-icon{
         display: none;
+      }      
     }
-    .flMainStructure {
+    /* Layout structure ( using nesting SASS syntax ) */
+    .flPgContainer {
+      .flMainStructure,
+      .flFooterStructure {
+        height: 100%;
         display: flex;
         flex-direction: row;
-        align-items: stretch;
-        height: 100%;
-     }
-     
-     .flLeftSpace {
-        width: 15%;
-     }
-     .flRightSpace {
-        width: 15%;
-     }
-     
-     .flMainBox {
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-     }    
+        .flLeftSpace {
+          width: 10%;
+        }
+        .flRightSpace {
+          width: 10%;
+        }
+        .flMainSpace {
+          display: flex;
+          flex-direction: row;
+          width: 80%;
+          .flArticleStructure {
+            margin: 15px;
+            width: 30%;
+            > p{
+              width: fit-content;
+            }
+          }
+        }      
+      }
+      .flFooterStructure {
+        height: auto!important;
+      }
+    }
 }
 
 /*
@@ -198,36 +221,8 @@ article{
       background: #000;
     }*/
 
-    .broken-glass {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(255, 255, 255, 0.1) 40%, transparent 70%);
-      border-radius: 50%;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-      border: 2px solid rgba(255, 255, 255, 0.4);
-    }
 
-    .broken-glass::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100%;
-      height: 100%;
-      background: repeating-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.05) 5px,
-        transparent 5px,
-        transparent 10px
-      );
-      transform: translate(-50%, -50%) rotate(45deg);
-      opacity: 0.8;
-    }
-
-    @import url("https://fonts.googleapis.com/css?family=Karla|Space+Mono");
+ @import url("https://fonts.googleapis.com/css?family=Karla|Space+Mono");
 
 :root {
   --contentHeight: 30vh;
@@ -244,6 +239,7 @@ body {
   background-color: #000;
 }
 */
+/*
 * {
     outline: 0;
     box-sizing: border-box;
@@ -355,3 +351,4 @@ details[open] > summary {
     opacity: 1;
   }
 }
+  */
