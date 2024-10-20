@@ -3,7 +3,7 @@ body {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin: 0;
   height: 100vh;
-  color: white;
+  color: #fff;
   background: radial-gradient(circle, rgb(179, 176, 176), black);
 }
 
@@ -53,13 +53,16 @@ article {
 }
 .flPgContainer .flMainStructure .flMainSpace,
 .flPgContainer .flFooterStructure .flMainSpace {
-  display: flexbox;
+  color: #fff;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
   flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 95%;
 }
 .flPgContainer .flMainStructure .flMainSpace .flArticleStructure,
 .flPgContainer .flFooterStructure .flMainSpace .flArticleStructure {
-  margin: 15px;
   width: auto;
 }
 .flPgContainer .flFooterStructure {
@@ -195,8 +198,7 @@ article {
   }
   .flPgContainer .flMainStructure .flMainSpace .flArticleStructure,
   .flPgContainer .flFooterStructure .flMainSpace .flArticleStructure {
-    margin: 15px;
-    width: 30%;
+    width: 50%;
   }
   .flPgContainer .flMainStructure .flMainSpace .flArticleStructure > p,
   .flPgContainer .flFooterStructure .flMainSpace .flArticleStructure > p {
