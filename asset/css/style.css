@@ -10,12 +10,12 @@ a{
     color: rgb(185, 183, 183);
 }
 
-main {
+.container-flex-main {
     flex-direction: column;
     margin:0px;
     height: 100%;  
 } 
-section{
+article{
     background-color: #212121;
     align-items: center;
     flex: 1;
@@ -29,7 +29,7 @@ article{
 }
 
 
-.container-flex-main {
+.flMainStructure {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -37,14 +37,14 @@ article{
     height: 100%;
  }
  
- .flexbox-left {
+ .flLeftSpace {
     width: 2.5%;
  }
- .flexbox-right {
+ .flRightSpace {
     width: 2.5%;
  }
  
- .flexbox-main {
+ .flMainBox {
     display: flex;
     flex-direction: column;
     width: 95%;
@@ -167,21 +167,21 @@ article{
     .header .menu-icon{
         display: none;
     }
-    .container-flex-main {
+    .flMainStructure {
         display: flex;
         flex-direction: row;
         align-items: stretch;
         height: 100%;
      }
      
-     .flexbox-left {
+     .flLeftSpace {
         width: 15%;
      }
-     .flexbox-right {
+     .flRightSpace {
         width: 15%;
      }
      
-     .flexbox-main {
+     .flMainBox {
         display: flex;
         flex-direction: column;
         width: 70%;

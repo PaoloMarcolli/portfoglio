@@ -1,40 +1,28 @@
-// code fragment
-// the form id is myForm
-$('#contact-form').on('submit', function(event) {
-    event.preventDefault(); // prevent reload
-    
-    var formData = new FormData(this);
-    formData.append('service_id', 'service_r1r7i8s');
-    formData.append('template_id', 'template_9lvmrru');
-    formData.append('user_id', 'GnTnGDNVDPIgO3pM3');
- 
-    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
-        type: 'POST',
-        data: formData,
-        contentType: false, // auto-detection
-        processData: false // no need to parse formData to string
-    }).done(function() {
-        alert('Your mail is sent!');
-    }).fail(function(error) {
-        alert('Oops... ' + JSON.stringify(error));
-    });
-});
-// code fragment
 
-emailjs.init({
-    publicKey: 'GnTnGDNVDPIgO3pM3',
-    // Do not allow headless browsers
-    blockHeadless: true,
-    blockList: {
-      // Block the suspended emails
-      list: ['foo@emailjs.com', 'bar@emailjs.com'],
-      // The variable contains the email address
-      watchVariable: 'paolo.marcolli@hotmail.com',
-    },
-    limitRate: {
-      // Set the limit rate for the application
-      id: 'app',
-      // Allow 1 request per 10s
-      throttle: 10000,
-    },
+window.onload = function() {
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var params = {
+        to_name: "Paolo Marcolli",
+        from_name: document.getElementById("name").value,
+        message: document.getElementById("message").value,
+        reply_to: document.getElementById("email").value,       
+      };      
+      const serviceID = "service_r1r7i8s";
+      const templateID = "template_9lvmrru";
+      alert(params.message);
+      // these IDs from the previous steps
+      emailjs.send(serviceID,templateID,  params)
+          .then(() => {
+              console.log('SUCCESS SEND MAIL!');
+              alert("Your message sent successfully sended to my email address")
+          }, (error) => {
+              console.log('ERROR SEND MAIL!', error);
+              alert("Your message not sent, contact administrator at email paolo.marcolli@hotmail.com")
+          });
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      document.getElementById("subject").value = "";
   });
+}
