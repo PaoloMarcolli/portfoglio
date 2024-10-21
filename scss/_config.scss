@@ -1,0 +1,27 @@
+$background-color:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+$background-color-with-gradient: radial-gradient(circle, rgb(179, 176, 176), black);
+$color: #fff;
+
+@mixin create-flex {
+    display: flex;
+}
+  
+@mixin base-color {
+    color: $color;
+    --bs-bg-opacity: 1;
+    background-color: $background-color ;
+}
+  
+@mixin base-color-main {
+    color: $color;
+    background-color: transparent ;
+}
+  
+@mixin base-page-properties {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    color: $color;    
+    background:  $background-color-with-gradient;
+}
+  

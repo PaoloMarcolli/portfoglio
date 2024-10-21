@@ -1,194 +1,305 @@
-$background-color:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
-$background-color-with-gradient: radial-gradient(circle, rgb(179, 176, 176), black);
-$color: #fff;
+@import 'config';
 
 
-@mixin create-flex {
-  display: flex;
-}
-
-@mixin base-color {
-  color: $color;
-  --bs-bg-opacity: 1;
-  background-color: $background-color ;
-}
-
-body {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
-    margin: 0;
-    height: 100vh;
-    color: $color;    
-    background:  $background-color-with-gradient;
-}
-
-a{
+* a{
   //color: rgb(185, 183, 183);
   @include base-color();    
 }
 
-article{
-    @include base-color();
-    background-color:black;
-    align-items: center;
-    flex: 1;
-    padding: 15px;
-    border: 1px dotted #ffffff91;
-    scroll-margin-top: 75px;
-}
 
-/* Layout structure ( using nesting SASS syntax ) */
-.flPgContainer {
+/*.card:hover{
+  box-shadow: 2px 2px 2px 2px  #02020277;    
+  transform: scale(1.009);
+}*/
+.card{
+  box-shadow: 2px 2px 2px 2px  #02020277;    
+}
+/*
+.projects {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    height: 30vh;
+    width: 100%;
+    background: 
+      linear-gradient(
+        to right,
+        rgba($primary-color, 0.9),
+        rgba($primary-color, 0.3)
+      ),
+      url('../img/model-1.jpg') center top;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    .flHdContainer {
-      background-color: red;
+    justify-content: flex-end;
+
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__items {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 5px solid $secondary-color;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
       width: 100%;
     }
-    .flMainStructure,
-    .flFooterStructure {
-      display: flex;
-      flex-direction: row;
-      border-radius: 10px;
-      height: 100%;
-     .flLeftSpace {
-        width: 2.5%;
-     }
-     .flRightSpace {
-        width: 2.5%;
-     }
-     .flMainSpace {
-        @include base-color();
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 95%;
-        .flArticleStructure {
-          width: auto;
-        }
-     }   
-    } 
-    .flFooterStructure {
-      height: auto!important;
-    }   
-}
-/* Responsive header ( using nesting SASS syntax ) */
-.header{
-  background-color: #212121de;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;    
-  width: 100%;
-  z-index: 1;
-  ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    overflow: hidden;
 
-    a
-    {
-      display: block;
-      /*border-right: 1px solid red;*/
-      padding: 20px 20px;
-      text-decoration: none;
-      &:hover
-      { 
-        background-color: #181818;
-      };
-    }    
-  }
-  .logo{
-    display: flex;
-    padding: 10px 10px;
-    flex-direction: row;
-    justify-content: start;
-    float: left;  
-  }
-  .menu{
-    clear: both;
-    max-height: 0;
-    transition: max-height 1.2s ease-out
-  }  
-  .menu-icon{
-    /*border: 1px solid red;*/
-    padding: 28px 20px;
-    position: relative;
-    float: right;
-    cursor: pointer;
-    .nav-icon
-    {
-      background-color: #FFF;
-      display: block;
-      width: 18px;
-      height: 2px;
-      position: relative;
-      transition: background-color .2s ease-out;
-      &:before,
-      &:after{
-        background-color: #FFF;
-        display: block;
-        width: 100%;
-        height: 100%;
-        content: "";
-        position: absolute;
-        transition: all 1.2s ease-out;
-        top: 5px;    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary-color;
+      opacity: 0;
+      @include transition-ease;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
       }
-      &::before{top: -5px;}
-    }    
-  }  
-  .menu-btn{
-    display: none;
-  }  
-  .menu-btn:checked ~ .menu{
-    max-height: 240px;
-    &.menu-icon{
-      .nav-icon{
-        background-color: transparent;
-      } 
-      .nav-icon::before{
-        transform: rotate(-45deg);
-        top: 0px;
-      }
-      .nav-icon::after{
-        transform: rotate(45deg);
-        top: 0px;
+      .projects__btn {
+        opacity: 1;
       }
     }
   }
-  .logo{
-    @include base-color();
-    margin-top: 5px;
-    text-decoration: none;
-    text-transform:capitalize;
+
+  &__btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
   }
+
+  &__btn {
+    opacity: 0;
+    color: set-text-color($secondary-color);
+    @include transition-ease;
+
+    &:hover {
+      color: set-text-color(set-text-color($secondary-color));
+    }
+  }
+
+
+  footer {
+    transform:
+      rotate(90deg)
+      translate(-3rem, -5rem);
+  }
+  
+}
+*/
+
+.fl-footer {
+  height: auto!important;
+  position: fixed; 
+  bottom: 0; 
+  right: 0; 
+  z-index: 1;    
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    opacity: 1.75;                /* Opacity (Transparency) */
+    color: rgba(0, 0, 0, 1.75);   /* RGBA Color (Alternative Transparency) */
+  }  
+  a {
+    background-color: white;
+    --bs-bg-opacity:1;
+    color: #70726F;
+    font-size: 20px;
+    padding: 5px;
+    transition: all .5s ease;
+    &:hover {
+      color: white;  
+    }  
+  }   
 }
 
+/* Layout structure ( using nesting SASS syntax ) */
+.fl-page {
+  @include base-page-properties();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* Responsive header ( using nesting SASS syntax ) */
+  .fl-header{
+    background-color: #212121de;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;    
+    width: 100%;
+    z-index: 1;
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      overflow: hidden;
+
+      a
+      {
+        display: block;
+        /*border-right: 1px solid red;*/
+        padding: 20px 20px;
+        text-decoration: none;
+        &:hover
+        { 
+          background-color: #181818;
+        };
+      }    
+    }
+    .logo{
+      @include base-color();
+      margin-top: 5px;
+      text-decoration: none;
+      text-transform:capitalize;    
+      display: flex;
+      padding: 10px 10px;
+      flex-direction: row;
+      justify-content: start;
+      float: left;  
+    }
+    .menu{
+      clear: both;
+      max-height: 0;
+      transition: max-height 1.2s ease-out
+    }  
+    .menu-icon{
+      /*border: 1px solid red;*/
+      padding: 28px 20px;
+      position: relative;
+      float: right;
+      cursor: pointer;
+      .nav-icon
+      {
+        background-color: #FFF;
+        display: block;
+        width: 18px;
+        height: 2px;
+        position: relative;
+        transition: background-color .2s ease-out;
+        &:before,
+        &:after{
+          background-color: #FFF;
+          display: block;
+          width: 100%;
+          height: 100%;
+          content: "";
+          position: absolute;
+          transition: all 1.2s ease-out;
+          top: 5px;    
+        }
+        &::before{top: -5px;}
+      }    
+    }  
+    .menu-btn{
+      display: none;
+    }  
+    .menu-btn:checked ~ .menu{
+      max-height: 240px;
+      &.menu-icon{
+        .nav-icon{
+          background-color: transparent;
+        } 
+        .nav-icon::before{
+          transform: rotate(-45deg);
+          top: 0px;
+        }
+        .nav-icon::after{
+          transform: rotate(45deg);
+          top: 0px;
+        }
+      }
+    }
+  }
+  /* Responsive main and footer ( using nesting SASS syntax ) */
+  .flMainContainer 
+  {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    height: 100%;
+    .flLeftSpace {
+      width: 2.5%;
+    }
+    .flRightSpace {
+      width: 2.5%;
+    }
+    .flMainSpace {
+      @include base-color-main();
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 95%;
+      .flArticleStructure {
+        @include base-color-main();
+        width: auto;
+        margin-bottom: 2%;
+        .fl-projects-list {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            &-item {
+              width: 46%;
+              img {
+                width: 100%;
+              }
+          }
+        }
+      }
+    }   
+  } 
+}
 
 /* Media query when the screen is larger than 756px */
 @media (min-width: 48em){ 
-    /* Responsive header ( using nesting SASS syntax ) */    
-    .header {
-      li{
-        float: left;
-        a{
-          padding: 20px 30px;
-        }
-      }
-      .menu{
-        clear: none;
-        float: right;
-        max-height: 240px;
-      }
-      .menu-icon{
-        display: none;
-      }      
-    }
     /* Layout structure ( using nesting SASS syntax ) */
-    .flPgContainer {
-      .flMainStructure,
-      .flFooterStructure {
+    .fl-page {
+      @include base-page-properties();
+      /* Responsive header ( using nesting SASS syntax ) */    
+      .fl-header {
+        li{
+          float: left;
+          a{
+            padding: 20px 30px;
+          }
+        }
+        .menu{
+          clear: none;
+          float: right;
+          max-height: 240px;
+        }
+        .menu-icon{
+          display: none;
+        }      
+      }
+      .flMainContainer 
+      {
         height: 100%;
         display: flex;
         flex-direction: row;
@@ -201,159 +312,31 @@ article{
         .flMainSpace {
           display: flex;
           flex-direction: row;
-          width: 80%;
+          width: 78%;
+          gap: 2%;
           .flArticleStructure {
-            width: 50%;
+            @include base-color-main();
+            margin-bottom: 0%;
+            width: 47%;
             > p{
               width: fit-content;
             }
+            .fl-projects-list {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                &-item {
+                  width: 46%;
+                  img {
+                    width: 100%;
+                  }
+              }
+            }  
           }
         }      
       }
-      .flFooterStructure {
-        height: auto!important;
-      }
     }
 }
-
-/*
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #000;
-    }*/
-
-
- @import url("https://fonts.googleapis.com/css?family=Karla|Space+Mono");
-
-:root {
-  --contentHeight: 30vh;
-  --sectionWidth: 700px;
-}
-
-/*
-* {
-  outline: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #000;
-}
-*/
-/*
-* {
-    outline: 0;
-    box-sizing: border-box;
-  }
-  
-section {
-  max-width: var(--sectionWidth);
-  margin: 40px auto;
-  width: 97%;
-  color: #fff;
-}
-
-summary {
-  display: block;
-  cursor: pointer;
-  padding: 10px;
-  font-family: "Space Mono", monospace;
-  font-size: 22px;
-  transition: .3s;
-  border-bottom: 2px solid;
-  user-select: none;
-}
-
-details > div {
-  display: flex;
-  flex-wrap: wrap;
-  overflow: auto;
-  height: 100%;
-  user-select: none;
-  padding: 0 20px;
-  font-family: "Karla", sans-serif;
-  line-height: 1.5;
-}
-
-details > div > img {
-  align-self: flex-start;
-  max-width: 100%;
-  margin-top: 20px;
-}
-
-details > div > p {
-  flex: 1;
-}
-
-details[open] > summary {
-   color: red;
-}
-
-@media (min-width: 768px) {
-  details[open] > div > p {
-    opacity: 0;
-    animation-name: showContent;
-    animation-duration: 0.6s;
-    animation-delay: 0.2s;
-    animation-fill-mode: forwards;
-    margin: 0;
-    padding-left: 20px;
-  }
-
-  details[open] > div {
-    animation-name: slideDown;
-    animation-duration: 0.3s;
-    animation-fill-mode: forwards;
-  }
-
-  details[open] > div > img {
-    opacity: 0;
-    height: 100%;
-    margin: 0;
-    animation-name: showImage;
-    animation-duration: 0.3s;
-    animation-delay: 0.15s;
-    animation-fill-mode: forwards;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    height: 0;
-    padding: 0;
-  }
-
-  to {
-    opacity: 1;
-    height: var(--contentHeight);
-    padding: 20px;
-  }
-}
-
-@keyframes showImage {
-  from {
-    opacity: 0;
-    clip-path: inset(50% 0 50% 0);
-    transform: scale(0.4);
-  }
-
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes showContent {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-  */

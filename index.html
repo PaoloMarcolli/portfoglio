@@ -15,10 +15,9 @@
     <meta property="og:site_name" content="Depyl" />
     <meta property="og:locale" content="it_IT" />
     <link rel="icon" href="asset/img/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
     <link rel="stylesheet" href="asset/css/main.css">
     <script src="asset/js/script.js"></script>
     <script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>  
@@ -28,299 +27,219 @@
         })();
       </script>      
 </head>
-<body class="flPgContainer" >
-  <div class="flHdContainer">
-    <header class="header">
+<body class="fl-page">
+  <header class="fl-header">
+    <nav>
       <div class="logo">
           <div>
               <img src="asset/img/favicon-32x32.png" alt="# Paolo Marcolli | Web Site" >
           </div>
       </div>
-          <input class="menu-btn" id="menu-btn" type="checkbox" checked="checked"/>
-          <label for="menu-btn" class="menu-icon">
-              <span class="nav-icon"></span>
-          </label>
-          <ul class="menu">
-              <li><a href="#who-i-am">Who am I ?</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#curriculum">Curriculum</a></li>
-              <li><a href="#contact">Contacts</a></li>
-          </ul>
-    </header>
-  </div>
-  <div class="flMainStructure">
-    <div class="flLeftSpace"></div>
-    <div class="flMainSpace">
-      <div class="flArticleStructure">
-        <article id="who-i-am">
-          <h2>Who am I ?</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque sit dignissimos fuga, repellat vel nobis! Iusto neque non obcaecati, assumenda dignissimos vel atque blanditiis ipsum. Odio obcaecati iste provident deserunt.</p>
-        </article>
-      </div>
-      <div class="flArticleStructure" >
-        <article id="contact">
-          <h2>Contact me</h2>   
-          <form id="contact-form"  class="accordion bg-dark">
-              <div class="row">
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                      <label for="name" class="form-label">Name</label>
+        <input class="menu-btn" id="menu-btn" type="checkbox" checked="checked"/>
+        <label for="menu-btn" class="menu-icon">
+            <span class="nav-icon"></span>
+        </label>
+        <ul class="menu">
+            <li><a href="#who-i-am">Who am I ?</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#curriculum">Curriculum</a></li>
+            <li><a href="#contact">Contacts</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main class="flMainContainer">
+      <div class="flLeftSpace"></div>        
+      <div class="flMainSpace">
+          <article id="who-i-am" class="flArticleStructure">
+            <div class="card" style="height: 100%;">
+              <h2 class="card-header">Who am I ?</h2>
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque sit dignissimos fuga, repellat vel nobis! Iusto neque non obcaecati, assumenda dignissimos vel atque blanditiis ipsum. Odio obcaecati iste provident deserunt.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article id="projects" class="flArticleStructure">
+            <div class="card" style="height: 100%;">
+              <h2 class="card-header">Projects</h2>
+              <div class="card-body">
+                <section class="fl-projects-list">
+                  <div class="fl-projects-list-item">
+                    <p class="card-text">Teknibraz</p>
+                    <img src="/asset/img/project-1.jpg" alt="My Project">
                   </div>
-              </div>
-              <div class="row" >
-                  <div class="col-sm-12 col-md-6 col-lg-4" style="width: fit-content;" >
-                      <input type="text"class="form-control" id="name" placeholder="Enter your name" />
+                  <div class="fl-projects-list-item">
+                    <p class="card-text">Elmazacavei</p>
+                    <img src="/asset/img/project-2.jpg" alt="My Project">
                   </div>
-              </div>
-              <div class="row mt-2">
-                  <div class="col-sm-12 col-md-6 col-lg-4" style="width: fit-content;">
-                      <label for="email" class="col-sm-12 col-md-6 col-lg-2 form-label" >Email</label>
+                  <div class="fl-projects-list-item">
+                    <p class="card-text">Depyl</p>
+                    <img src="/asset/img/project-3.jpg" alt="My Project">
                   </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-12 col-md-6 col-lg-2 mt-2" style="width: fit-content;">
-                      <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+                  <div class="fl-projects-list-item">
+                    <p class="card-text">My Project</p>
+                    <img src="/asset/img/project-4.jpg" alt="My Project">
                   </div>
-              </div>
-              <div class="row mt-2">
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                      <label for="subject" class="col-sm-12 col-md-6 col-lg-2 form-label" >Subject</label>
+                  <div class="fl-projects-list-item">
+                    <p class="card-text">My Project</p>
+                    <img src="/asset/img/project-5.jpg" alt="My Project">
                   </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-12 col-md-6 col-lg-12 mt-2" >
-                      <input type="subject" class="form-control" id="subject" placeholder="Enter your subject" />
+                  <div class="fl-projects-list-item">
+                    <p class="card-text">My Project</p>
+                    <img src="/asset/img/project-6.jpg" alt="My Project">
                   </div>
-              </div>
-              <div class="row mt-2">
-                  <div class="col-sm-12 col-md-6 col-lg-12">
-                      <label for="subject" class="col-sm-12 col-md-6 col-lg-2 form-label" >Message</label>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-12" >
-                      <textarea class="form-control" type="subject" id="message" rows="5" placeholder="Write your message" ></textarea>
-                  </div>
-              </div>
-              <div class="row mt-3" >
-                  <div class="col-sm-12 col-md-6 col-lg-12"  >
-                      <button type="submit" class="btn btn-outline-light" >Send Message</button>
-                  </div>
-              </div>
-        </form>
-        </article>
-      </div>
-      <div class="flArticleStructure" >
-        <article id="curriculum">
-          <h2>Curriculum Vitae</h2>
-          <div class="accordion bg-dark" id="accordionExample">
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Accordion Item #1
-                  </button>
-                </h3>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Accordion Item #2
-                  </button>
-                </h3>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h3 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Accordion Item #3
-                  </button>
-                </h3>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                  </div>
-                </div>
-              </div>
-          </div>            
-          <section>
-            <details open>
-              <summary>Carl Gustav Jung</summary>
-              <div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_jung.jpg" />
-                <p>The Swiss psychologist and psychiatrist Carl Jung was one of the major forces responsible for bringing psychological (having to do with the mind and its processes) thought and its theories into the twentieth century.</p>
-              </div>
-            </details>
-            <details>
-              <summary>Sigmund Freud</summary>
-              <div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_freud.jpg" />
-                <p>The work of Sigmund Freud, the Austrian founder of psychoanalysis, marked the beginning of a modern, dynamic psychology by providing the first well-organized explanation of the inner mental forces determining human behavior.</p>
-              </div>
-            </details>
-            <details>
-              <summary>Alfred Adler</summary>
-              <div>
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_alfred.jpg" />
-                <p>Austrian psychiatrist Alfred Adler was credited with developing several important theories on the motivation of human behavior. He founded the school of individual psychology, a comprehensive "science of living" that focuses on the uniqueness of the individual
-                  and a person's relationships with society.</p>
-              </div>
-            </details>
-          </section>            
-      </article>
-      </div>
-      <div class="flArticleStructure" >
-        <article id="projects">
-          <h2>Projects</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, illo enim quisquam suscipit a assumenda quo debitis culpa et sit dolorum quod, eos odio optio soluta? In iusto molestiae tempore.</p>
-      </article>
-      </div>
-    </div>
-    <div class="flRightSpace"></div>
-      <!--
-      <main class="flMainBox"> 
-        <article id="home">
-            <h2>Who am I ?</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque sit dignissimos fuga, repellat vel nobis! Iusto neque non obcaecati, assumenda dignissimos vel atque blanditiis ipsum. Odio obcaecati iste provident deserunt.</p>
-        </article>
-        <article id="projects">
-            <h2>Projects</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, illo enim quisquam suscipit a assumenda quo debitis culpa et sit dolorum quod, eos odio optio soluta? In iusto molestiae tempore.</p>
-        </article>
-        <article id="curriculum">
-            <h2>Curriculum Vitae</h2>
 
-            <div class="accordion bg-dark" id="accordionExample">
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Accordion Item #1
-                    </button>
-                  </h3>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <!--
+                  <div class="fl-projects-list__items">
+                    <div class="fl-projects-list__item">
+                      <img src="/asset/img/project-1.jpg" alt="My Project">
+                      <div class="fl-projects-list__btns">
+                        <a href="#!" class="projects-list__btn">
+                          <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#!" class="projects-list__btn">
+                          <i class="fab fa-github"></i> Github
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h3>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  -->
+                    <!--
+                    <div class="fl-projects-list__item">
+                      <img src="/asset/img/project-2.jpg" alt="My Project">
+                      <div class="fl-projects-list__btns">
+                        <a href="#!" class="projects-list__btn">
+                          <i class="fas fa-eye"></i> Preview
+                        </a>
+                        <a href="#!" class="fl-projects-list__btn">
+                          <i class="fab fa-github"></i> Github
+                        </a>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h3 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h3>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  <div class="social-icons">
+                    <a href="#!">
+                      <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="#!">
+                      <i class="fab fa-github fa-2x"></i>
+                    </a>
+                  </div>-->
+                </section>
+              </div>            
+            </div>
+          </article>
+          <article id="contact" class="flArticleStructure">
+            <div class="card" style="height: 100%;">
+              <h2 class="card-header">Contact me</h2>
+              <div class="card-body">
+                <p class="card-text">
+                  <form id="contact-form" >
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-12">
+                            <label for="name" class="form-label">Name</label>
+                        </div>
                     </div>
-                  </div>
-                </div>
+                    <div class="row" >
+                        <div class="col-sm-12 col-md-6 col-lg-2" style="width: fit-content;" >
+                            <input type="text"class="form-control" id="name" placeholder="Enter your name" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-12 col-md-6 col-lg-12" >
+                            <label for="email" class="col-sm-12 col-md-6 col-lg-2 form-label" >Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-2 mt-2" style="width: fit-content;">
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-12 col-md-6 col-lg-12">
+                            <label for="subject" class="col-sm-12 col-md-6 col-lg-2 form-label" >Subject</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-12 mt-2" >
+                            <input type="subject" class="form-control" id="subject" placeholder="Enter your subject" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-sm-12 col-md-6 col-lg-12">
+                            <label for="subject" class="col-sm-12 col-md-6 col-lg-2 form-label" >Message</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12" >
+                            <textarea class="form-control" type="subject" id="message" rows="5" placeholder="Write your message" ></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-3" >
+                        <div class="col-sm-12 col-md-6 col-lg-12"  >
+                            <button type="submit" class="btn btn-outline-light" >Send Message</button>
+                        </div>
+                    </div>
+                </form>
+                </p>
+              </div>
+            </div>
+          </article>
+          <article id="curriculum" class="flArticleStructure">
+            <div class="card" style="height: 100%;">
+              <h2 class="card-header">Curriculum Vitae</h2>
+              <div class="card-body">
+                <section>
+                  <details open>
+                    <summary>Carl Gustav Jung</summary>
+                    <div>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_jung.jpg" />
+                      <p class="card-text">The Swiss psychologist and psychiatrist Carl Jung was one of the major forces responsible for bringing psychological (having to do with the mind and its processes) thought and its theories into the twentieth century.</p>
+                    </div>
+                  </details>
+                  <details>
+                    <summary>Sigmund Freud</summary>
+                    <div>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_freud.jpg" />
+                      <p class="card-text">The work of Sigmund Freud, the Austrian founder of psychoanalysis, marked the beginning of a modern, dynamic psychology by providing the first well-organized explanation of the inner mental forces determining human behavior.</p>
+                    </div>
+                  </details>
+                  <details>
+                    <summary>Alfred Adler</summary>
+                    <div>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_alfred.jpg" />
+                      <p class="card-text">Austrian psychiatrist Alfred Adler was credited with developing several important theories on the motivation of human behavior. He founded the school of individual psychology, a comprehensive "science of living" that focuses on the uniqueness of the individual
+                        and a person's relationships with society.</p>
+                    </div>
+                  </details>
+                </section>            
+              </div>
             </div>            
-            <section>
-              <details open>
-                <summary>Carl Gustav Jung</summary>
-                <div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_jung.jpg" />
-                  <p>The Swiss psychologist and psychiatrist Carl Jung was one of the major forces responsible for bringing psychological (having to do with the mind and its processes) thought and its theories into the twentieth century.</p>
-                </div>
-              </details>
-              <details>
-                <summary>Sigmund Freud</summary>
-                <div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_freud.jpg" />
-                  <p>The work of Sigmund Freud, the Austrian founder of psychoanalysis, marked the beginning of a modern, dynamic psychology by providing the first well-organized explanation of the inner mental forces determining human behavior.</p>
-                </div>
-              </details>
-              <details>
-                <summary>Alfred Adler</summary>
-                <div>
-                  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/344846/_alfred.jpg" />
-                  <p>Austrian psychiatrist Alfred Adler was credited with developing several important theories on the motivation of human behavior. He founded the school of individual psychology, a comprehensive "science of living" that focuses on the uniqueness of the individual
-                    and a person's relationships with society.</p>
-                </div>
-              </details>
-            </section>            
-        </article>
-        <article id="contact">
-            <h2>Contact me</h2>   
-            <form id="contact-form"  class="accordion bg-dark">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <label for="name" class="form-label">Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <input type="text"class="form-control" id="name" placeholder="Enter your name" />
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <label for="email" class="col-sm-12 col-md-6 col-lg-2 form-label" >Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-2 mt-2">
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email"/>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <label for="subject" class="col-sm-12 col-md-6 col-lg-2 form-label" >Subject</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-2 mt-2">
-                        <input type="subject" class="form-control" id="subject" placeholder="Enter your subject"/>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <label for="subject" class="col-sm-12 col-md-6 col-lg-2 form-label" >Message</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                        <textarea class="form-control" type="subject" id="message" rows="5" placeholder="Write your message"></textarea>
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-sm-12 col-md-6 col-lg-2">
-                        <button type="submit" class="btn btn-outline-light" >Send Message</button>
-                    </div>
-                </div>
-            </form>
-        </article>
-      </main>
-      -->
-  </div>
-  <div class="flFooterStructure">
-    <div class="flLeftSpace"></div>
-    <div class="flMainSpace">
-      <footer>
-          <img src="asset/img/copyright-sign-white-icon-vector-15479713.jpg" height="50px" alt="# Paolo Marcolli | Web Site" >
-      </footer>
-    </div>
-    <div class="flRightSpace"></div>
-  </div>
+          </article>
+      </div>
+      <div class="flRightSpace"></div>
+  </main>
+  <footer class="fl-footer">
+      <div class="social-icons">
+        <a href="#!">
+          <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#!">
+          <i class="fa fa-facebook"></i>
+        </a>
+        <a href="#!">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#!">
+          <i class="fa fa-github"></i>
+        </a>
+      </div>            
+  </footer>
+  <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
 </body>
 </html>
