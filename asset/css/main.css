@@ -189,6 +189,28 @@
 
 }
 */
+.home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.3)), url("../img/model-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-size: contain;
+}
+.home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid set-text-color(#fff);
+}
+.home__name--last {
+  color: #fff;
+  font-weight: 700;
+}
+
 /* Layout footer ( using nesting SASS syntax ) */
 .fl-footer {
   height: auto !important;
@@ -201,11 +223,10 @@
   display: flex;
   flex-direction: column;
   opacity: 1.75; /* Opacity (Transparency) */
-  color: rgb(0, 0, 0); /* RGBA Color (Alternative Transparency) */
+  color: rgb(255, 255, 255); /* RGBA Color (Alternative Transparency) */
 }
 .fl-footer a {
   background-color: white;
-  --bs-bg-opacity:1;
   color: #70726F;
   font-size: 20px;
   padding: 5px;
