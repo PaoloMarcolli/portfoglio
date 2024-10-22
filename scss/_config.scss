@@ -23,5 +23,15 @@ $color: #fff;
     height: 100vh;
     color: $color;    
     background:  $background-color-with-gradient;
+    /*background: 
+    linear-gradient(
+      to right,
+      rgba(rgb(0, 0 ,0), 0.9),
+      rgba(rgb(255, 255 ,255), 0.3)
+    ),
+    url('../img/model-1.jpg') ;
+    background-repeat: no-repeat;
+    background-size:contain;*/
+
 }
   
