@@ -1,4 +1,5 @@
 @import 'config';
+@import 'curriculum';
 
 
 * a{
@@ -113,6 +114,50 @@
 }
 */
 
+.woork-sheet{
+  /* Style the tab */
+&-tab-header {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+  /* Style the buttons that are used to open the tab content */
+&-tab-header button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* Change background color of buttons on hover */
+&-tab-header button:hover {
+  background-color: #ddd;
+}
+/* Create an active/current "tab button" class */
+&-tab-header button.active {
+  background-color: #ccc;
+}
+/* Style the tab content */
+.cnt-woork-sheet {
+  float: left;
+  padding: 12px 12px;
+  border: 1px dotted #ccc;
+  border-radius: 0 10px 0 10px;
+  width: 70%;
+  border-left: none;
+  height:  100%;
+}  
+}
+
+
+/* Layout footer ( using nesting SASS syntax ) */
 .fl-footer {
   height: auto!important;
   position: fixed; 
@@ -340,3 +385,4 @@
       }
     }
 }
+
