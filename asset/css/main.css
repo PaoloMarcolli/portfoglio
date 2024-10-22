@@ -189,48 +189,6 @@
 
 }
 */
-.woork-sheet {
-  /* Style the tab */
-  /* Style the buttons that are used to open the tab content */
-  /* Change background color of buttons on hover */
-  /* Create an active/current "tab button" class */
-  /* Style the tab content */
-}
-.woork-sheet-tab-header {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-  width: 30%;
-  height: 300px;
-}
-.woork-sheet-tab-header button {
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.woork-sheet-tab-header button:hover {
-  background-color: #ddd;
-}
-.woork-sheet-tab-header button.active {
-  background-color: #ccc;
-}
-.woork-sheet .cnt-woork-sheet {
-  float: left;
-  padding: 12px 12px;
-  border: 1px dotted #ccc;
-  border-radius: 0 10px 0 10px;
-  width: 70%;
-  border-left: none;
-  height: 100%;
-}
-
 /* Layout footer ( using nesting SASS syntax ) */
 .fl-footer {
   height: auto !important;
@@ -268,6 +226,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
   /* Responsive header ( using nesting SASS syntax ) */
   /* Responsive main and footer ( using nesting SASS syntax ) */
 }
@@ -361,6 +320,7 @@
   flex-direction: row;
   border-radius: 10px;
   height: 100%;
+  margin-top: 80px;
 }
 .fl-page .flMainContainer .flLeftSpace {
   width: 2.5%;
@@ -381,6 +341,7 @@
   background-color: transparent;
   width: auto;
   margin-bottom: 2%;
+  scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
 }
 .fl-page .flMainContainer .flMainSpace .flArticleStructure .fl-projects-list {
   margin-top: 15px;
@@ -426,6 +387,7 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+    margin-top: 80px;
   }
   .fl-page .flMainContainer .flLeftSpace {
     width: 10%;
