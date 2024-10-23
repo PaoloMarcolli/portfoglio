@@ -1,19 +1,24 @@
-$background-color:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+/* Base colors */
+$background-color-primary:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;
+$background-color-secondary:  #fff!important;
 $background-color-with-gradient: radial-gradient(circle, rgb(179, 176, 176), black);
-$color: #fff;
+$primary-color: #fff;
+$secondary-color: #fff;
 
-@mixin create-flex {
+/* Base mixin */
+@mixin create-flex($direction) {
     display: flex;
+    flex-direction: $direction;
 }
   
 @mixin base-color {
-    color: $color;
+    color: $primary-color;
     --bs-bg-opacity: 1;
-    background-color: $background-color ;
+    background-color: $background-color-primary;
 }
   
 @mixin base-color-main {
-    color: $color;
+    color: $primary-color;
     background-color: transparent ;
 }
   
@@ -21,8 +26,9 @@ $color: #fff;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
     height: 100vh;
-    color: $color;    
-    background:  $background-color-with-gradient;
+    color: $primary-color;    
+    background-color: #fff;
+    /*background:  $background-color-with-gradient;*/
     /*background: 
     linear-gradient(
       to right,

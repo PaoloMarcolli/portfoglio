@@ -1,27 +1,19 @@
 @import 'config';
+@import 'bootstrap-override';
+@import 'who-i-am';
 @import 'curriculum';
-
+@import 'projects';
+@import 'contact';
 
 * a{
   //color: rgb(185, 183, 183);
-  @include base-color();    
-}
-
-
-/*.card:hover{
-  box-shadow: 2px 2px 2px 2px  #02020277;    
-  transform: scale(1.009);
-}*/
-.card{
-  box-shadow: 2px 2px 2px 2px  #02020277; 
-  opacity: 0.95;   
+  @include base-color(); 
   &:hover{
-    transform: scale(1.009);  
-    box-shadow: 3px 3px 3px 3px  #02020277;
-    opacity: 0.95;
-  }
-  
+    @include base-color(); 
+  }   
 }
+
+
 /*
 .projects {
   padding-bottom: 2rem;
@@ -120,65 +112,11 @@
   
 }
 */
-  
-.home {
-  height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
-  background: 
-    linear-gradient(
-      to right,
-      rgba(rgb(0, 0 ,0), 0.9),
-      rgba(rgb(255, 255 ,255), 0.3)
-    ),
-    url('../img/model-1.jpg') ;
-    background-repeat: no-repeat;
-    background-size: 100px 100px;    
-    background-size:contain;
-  &__name {
-    font-size: 5rem;
-    padding-bottom: 1rem;
-    margin-bottom: 1rem;
-    border-bottom: 2px solid set-text-color($color);
-    &--last {
-      color: $color;
-      font-weight: 700;
-    }
-  }
-}
 
-/* Layout footer ( using nesting SASS syntax ) */
-.fl-footer {
-  height: auto!important;
-  position: fixed; 
-  bottom: 0; 
-  right: 0; 
-  z-index: 1;    
-  .social-icons {
-    display: flex;
-    flex-direction: column;
-    opacity: 1.75;                /* Opacity (Transparency) */
-    color: rgba(255,255, 255, 1);   /* RGBA Color (Alternative Transparency) */
-  }  
-  a {
-    background-color: white;
-    color: #70726F;
-    font-size: 20px;
-    padding: 5px;
-    transition: all .5s ease;
-    &:hover {
-      color: white;  
-    }  
-  }   
-}
-
-/* Layout structure ( using nesting SASS syntax ) */
+/* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-page {
   @include base-page-properties();
-  display: flex;
-  flex-direction: column;
+  @include create-flex(column);
   align-items: center;
   width: 100%;
   scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
@@ -273,22 +211,16 @@
     }
   }
   /* Responsive main and footer ( using nesting SASS syntax ) */
-  .flMainContainer 
-  {
-    display: flex;
-    flex-direction: row;
+  .fl-main {
+    @include create-flex(row);
     border-radius: 10px;
     height: 100%;
+    margin: 0 2.5%;
     margin-top: 70px;
-    .flLeftSpace {
-      width: 2.5%;
-    }
-    .flRightSpace {
-      width: 2.5%;
-    }
-    .flMainSpace {
+    justify-content: center;
+    .cnt-main {
       @include base-color-main();
-      flex-direction: row;
+      @include create-flex(column);
       justify-content: center;
       flex-wrap: wrap;
       width: 95%;
@@ -297,27 +229,36 @@
         width: auto;
         margin-bottom: 2%;
         scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
-        .fl-projects-list {
-            margin-top: 15px;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            &-item {
-              width: 46%;
-              img {
-                width: 100%;
-              }
-          }
-        }
       }
     }   
   } 
+  /* Responsive main and footer ( using nesting SASS syntax ) */
+  .fl-footer {
+    height: auto!important;
+    position: fixed; 
+    bottom: 0; 
+    right: 0; 
+    z-index: 1;    
+    .social-icons {
+      @include create-flex(column);
+      opacity: 1.75;                /* Opacity (Transparency) */
+      color: rgba(255,255, 255, 1);   /* RGBA Color (Alternative Transparency) */
+    }  
+    a {
+      background-color: white;
+      color: #70726F;
+      font-size: 20px;
+      padding: 5px;
+      transition: all .5s ease;
+      /*&:hover {
+        color: white;  
+      } */ 
+    }   
+  }  
 }
 
-/* Media query when the screen is larger than 756px */
-@media (min-width: 48em){ 
+/* Media query when the screen is larger than 1152px ( PC/laptop device ) */
+@media (min-width: 1152px){ 
     /* Layout structure ( using nesting SASS syntax ) */
     .fl-page {
       @include base-page-properties();
@@ -338,22 +279,13 @@
           display: none;
         }      
       }
-      .flMainContainer 
-      {
-        height: 100%;
-        display: flex;
-        flex-direction: row;
+      .fl-main {
+        @include create-flex(row);
+        margin: 0 10%;
         margin-top: 80px;
-        .flLeftSpace {
-          width: 10%;
-        }
-        .flRightSpace {
-          width: 10%;
-        }
-        .flMainSpace {
-          display: flex;
-          flex-direction: row;
-          width: 78%;
+        justify-content: center;
+        .cnt-main {
+          @include create-flex(row);
           gap: 2%;
           .flArticleStructure {
             @include base-color-main();
@@ -362,20 +294,6 @@
             > p{
               width: fit-content;
             }
-            .fl-projects-list {
-                margin-top: 15px;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-                &-item {
-                  width: 46%;
-                  img {
-                    width: 100%;
-                  }
-              }
-            }  
           }
         }      
       }

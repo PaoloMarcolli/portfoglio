@@ -1,0 +1,14 @@
+#projects .fl-projects-list {
+    margin-top: 15px;
+    @include create-flex(row);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    &-item {
+      width: 46%;
+      img {
+        width: 100%;
+      }
+  }
+  }
+  
