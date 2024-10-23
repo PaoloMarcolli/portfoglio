@@ -221,8 +221,8 @@
     .cnt-main {
       @include base-color-main();
       @include create-flex(column);
-      justify-content: center;
-      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
       width: 95%;
       .flArticleStructure {
         @include base-color-main();
@@ -230,30 +230,32 @@
         margin-bottom: 2%;
         scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
       }
-    }   
-  } 
-  /* Responsive main and footer ( using nesting SASS syntax ) */
-  .fl-footer {
-    height: auto!important;
-    position: fixed; 
-    bottom: 0; 
-    right: 0; 
-    z-index: 1;    
+    } 
     .social-icons {
+      position: fixed;
+      bottom: 0; 
+      right: 0; 
+      z-index: 1;      
       @include create-flex(column);
       opacity: 1.75;                /* Opacity (Transparency) */
       color: rgba(255,255, 255, 1);   /* RGBA Color (Alternative Transparency) */
+      a {
+        background-color: white;
+        color: #70726F;
+        font-size: 20px;
+        padding: 5px;
+        transition: all .5s ease;
+        /*&:hover {
+          color: white;  
+        } */ 
+      }     
     }  
-    a {
-      background-color: white;
-      color: #70726F;
-      font-size: 20px;
-      padding: 5px;
-      transition: all .5s ease;
-      /*&:hover {
-        color: white;  
-      } */ 
-    }   
+  } 
+  /* Responsive main and footer ( using nesting SASS syntax ) */
+  .fl-footer {
+    margin-top: 100px;
+    height: 10%;
+    background-color:purple;
   }  
 }
 
@@ -284,8 +286,11 @@
         margin: 0 10%;
         margin-top: 80px;
         justify-content: center;
+        flex-wrap: wrap;
         .cnt-main {
           @include create-flex(row);
+          justify-content: center;
+          flex-wrap: wrap;    
           gap: 2%;
           .flArticleStructure {
             @include base-color-main();

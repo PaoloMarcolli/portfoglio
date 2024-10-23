@@ -1,0 +1,15 @@
+/*.card:hover{
+  box-shadow: 2px 2px 2px 2px  #02020277;    
+  transform: scale(1.009);
+}*/
+.card{
+    box-shadow: 2px 2px 2px 2px  #02020277; 
+    opacity: 0.95;   
+    &:hover{
+      transform: scale(1.009);  
+      box-shadow: 3px 3px 3px 3px  #02020277;
+      opacity: 0.95;
+    }
+    
+  }
+  
