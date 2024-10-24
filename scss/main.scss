@@ -144,7 +144,6 @@
   @include create-flex(column);
   align-items: center;
   width: 100%;
-  scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
   
   /* Responsive header ( using nesting SASS syntax ) */
   .fl-header{
