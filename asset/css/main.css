@@ -28,7 +28,7 @@
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-footer {
   margin-top: 100px;
-  padding: 0 10%;
+  padding: 0 2%;
   background-color: #212121 !important;
 }
 .fl-footer-list {
@@ -68,6 +68,7 @@
   font-size: 0.9rem;
   color: #717286;
   cursor: none;
+  margin-bottom: 5%;
 }
 .fl-footer-list-item-list {
   display: flex;
@@ -76,11 +77,6 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-}
-.fl-footer-list-item-list #copyright {
-  font-size: 0.9rem;
-  color: #717286;
-  cursor: none;
 }
 .fl-footer-list-item-list-subitem {
   /*border: 1px solid red;*/
@@ -93,6 +89,11 @@
 
 /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 @media (min-width: 1152px) {
+  .fl-footer {
+    margin-top: 100px;
+    padding: 0 10%;
+    background-color: #212121 !important;
+  }
   .fl-footer-list {
     display: flex;
     flex-direction: column;
@@ -107,11 +108,6 @@
     /*border: 1px solid red;*/
     justify-content: space-around;
     width: 100%;
-  }
-  .fl-footer-list-item-list #copyright {
-    font-size: 0.9rem;
-    color: #717286;
-    cursor: none;
   }
   .fl-footer-list-item-list-subitem {
     /*border: 1px solid red;*/
