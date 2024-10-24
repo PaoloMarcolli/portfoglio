@@ -1,4 +1,6 @@
 /* Base colors */
+/*$background-color-primary:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
+/* Canvas colors */
 /* Base mixin */
 /*.card:hover{
   box-shadow: 2px 2px 2px 2px  #02020277;    
@@ -14,6 +16,111 @@
   opacity: 0.95;
 }
 
+#btn-scroll-to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 99;
+  display: none;
+}
+
+/* Footer Module */
+/* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
+.fl-footer {
+  margin-top: 100px;
+  padding: 0 10%;
+  background-color: #212121 !important;
+}
+.fl-footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+.fl-footer-list-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3px;
+  margin-bottom: 5px;
+  border: 1px solid red;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 2%;
+}
+.fl-footer-list-item ul.menu {
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+.fl-footer-list-item ul.menu a {
+  display: block;
+  text-decoration: none;
+}
+.fl-footer-list-item ul.menu a:hover {
+  background-color: #181818;
+}
+.fl-footer-list-item ul#footer-disclaimer.menu {
+  font-size: 0.9rem;
+  color: #717286;
+  cursor: none;
+}
+.fl-footer-list-item-list {
+  display: flex;
+  flex-direction: row;
+  /*border: 1px solid red;*/
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.fl-footer-list-item-list #copyright {
+  font-size: 0.9rem;
+  color: #717286;
+  cursor: none;
+}
+.fl-footer-list-item-list-subitem {
+  /*border: 1px solid red;*/
+  width: 32%;
+  text-align: center;
+}
+.fl-footer-list-item-list-subitem p, .fl-footer-list-item-list-subitem a {
+  cursor: pointer;
+}
+
+/* Media query when the screen is larger than 1152px ( PC/laptop device ) */
+@media (min-width: 1152px) {
+  .fl-footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+  }
+  .fl-footer-list-item-list {
+    display: flex;
+    flex-direction: row;
+    /*border: 1px solid red;*/
+    justify-content: space-around;
+    width: 100%;
+  }
+  .fl-footer-list-item-list #copyright {
+    font-size: 0.9rem;
+    color: #717286;
+    cursor: none;
+  }
+  .fl-footer-list-item-list-subitem {
+    /*border: 1px solid red;*/
+    width: 25%;
+  }
+  .fl-footer-list-item-list-subitem p, .fl-footer-list-item-list-subitem a {
+    cursor: pointer;
+  }
+}
 #who-i-am .home {
   height: 100%;
   padding-top: 40vh;
@@ -133,12 +240,12 @@
 * a {
   color: #fff;
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #212121 !important;
 }
 * a:hover {
   color: #fff;
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #212121 !important;
 }
 
 /*
@@ -239,6 +346,27 @@
 
 }
 */
+/*
+#btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #555; 
+  }
+}
+*/
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-page {
   font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -262,8 +390,13 @@
   width: 100%;
   scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
   /* Responsive header ( using nesting SASS syntax ) */
-  /* Responsive main and footer ( using nesting SASS syntax ) */
-  /* Responsive main and footer ( using nesting SASS syntax ) */
+  /* Responsive main  ( using nesting SASS syntax ) */
+  /* Responsive footer ( using nesting SASS syntax ) */
+  /*.fl-footer {
+    margin-top: 100px;
+    height: 10%;
+    background-color:red;
+  }*/
 }
 .fl-page .fl-header {
   background-color: rgba(33, 33, 33, 0.8705882353);
@@ -290,7 +423,7 @@
 .fl-page .fl-header .logo {
   color: #fff;
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #212121 !important;
   margin-top: 5px;
   text-decoration: none;
   text-transform: capitalize;
@@ -354,7 +487,6 @@
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  height: 100%;
   margin: 0 2.5%;
   margin-top: 70px;
   justify-content: center;
@@ -394,11 +526,6 @@
   /*&:hover {
     color: white;  
   } */
-}
-.fl-page .fl-footer {
-  margin-top: 100px;
-  height: 10%;
-  background-color: purple;
 }
 
 /* Media query when the screen is larger than 1152px ( PC/laptop device ) */

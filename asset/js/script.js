@@ -56,3 +56,4 @@ function openWorkSheetPeriod(evt, woorkSheetPeriodName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpenWorkSheet").click();
 document.getElementById("defaultOpenWorkPeriod").click();
+

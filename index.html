@@ -15,7 +15,7 @@
     <meta property="og:site_name" content="Paolo Marcolli | Portfoglio" />
     <meta property="og:locale" content="it_IT" />
     <link rel="icon" href="asset/img/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="asset/css/main.css">
@@ -26,7 +26,16 @@
         })();
       </script>      
 </head>
-<body class="fl-page">
+<body class="fl-page">  
+<!-- Back to top button -->
+  <button
+      type="button"
+      class="btn btn-dark rounded-circle btn-floating btn-lg border-light border-3"
+      id="btn-scroll-to-top"
+      title="Scroll to the top"
+      >
+      <i class="fas fa-arrow-up"></i>
+  </button>  
   <div class="cnt-background">
     <header class="fl-header">
       <nav>
@@ -434,25 +443,71 @@
                 </div>                          
             </article>
         </div>
-        <div class="social-icons">
-          <a href="#!">
-            <i class="fa fa-twitter"></i>
-          </a>
-          <a href="#!">
-            <i class="fa fa-facebook"></i>
-          </a>
-          <a href="#!">
-            <i class="fa fa-instagram"></i>
-          </a>
-          <a href="#!">
-            <i class="fa fa-github"></i>
-          </a>
-        </div>        
       </main>
     <footer class="fl-footer">
-      <div>Copyright © 2021</div>            
+      <div class="fl-footer-list">
+        <section class="fl-footer-list-item">
+          <ul class="menu">
+              <li><a href="#who-i-am">Who am I ?</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#curriculum">Curriculum</a></li>
+              <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </section>
+        <section class="fl-footer-list-item mb-xl-5">
+          <div class="fl-footer-list-item-list">
+            <div class="fl-footer-list-item-list-subitem" style="flex-grow: 1;">
+              <span class="mb-3 text-vertical-center">Follow me</span>
+              <a href="https://it-it.facebook.com/paolo.marcolli" target="_blank" class="m-2 text-decoration-none" >
+                <i class="fab fa-facebook fa-3x"></i>
+              </a>
+              <a href="https://www.instagram.com/paolomarcolli/" target="_blank" class="m-2 text-decoration-none">
+                <i class="fab fa-instagram fa-3x"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/paolo-marcolli-995b603a/" target="_blank" class="m-2 text-decoration-none">
+                <i class="fab fa-linkedin fa-3x"></i>
+              </a>
+              <a href="https://github.com/PaoloMarcolli?tab=repositories" target="_blank" class="m-2 text-decoration-none">
+                <i class="fab fa-github fa-3x"></i>
+              </a>
+            </div>
+          </div>            
+        </section>
+        <section class="fl-footer-list-item">
+          <div class="fl-footer-list-item-list">
+            <div class="fl-footer-list-item-list-subitem">
+              <p>
+                Privacy
+              </p>
+            </div>
+            <div class="fl-footer-list-item-list-subitem">
+              <p>
+                Termini e condizioni
+              </p>
+            </div>
+            <div class="fl-footer-list-item-list-subitem">
+              <p>
+                Cookie Policy
+              </p>
+            </div>
+            <div class="fl-footer-list-item-list-subitem">
+              <p>
+                Impostazioni cookie
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="fl-footer-list-item">
+            <ul id="footer-disclaimer" class="menu">
+              <li>
+                ©2024-2024 Paolo Marcolli. All rights reserved.
+              </li>
+            </ul>
+        </section>
+      </div>
     </footer>
     <script src="asset/js/script.js"></script>
+    <script src="asset/js/buttonScrollToTopScript.js"></script>
     <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
   </div>
 </body>
