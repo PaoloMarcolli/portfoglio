@@ -5,90 +5,103 @@
   margin-top: 100px;
   padding: 0 2%;
   background-color:$background-color-primary;
-  &-list {
+  &-cnt {
       @include create-flex(column);
       align-items: center;
-      justify-content: space-around;
+      border: 1px solid red;
       width: 100%;
       height: 100%;
-      &-item {
-          @include create-flex(row);
-          margin-top: 3px;
-          margin-bottom: 5px;
+      &-item-links {
+        @include create-flex(row);
+        margin-top: 3px;
+        margin-bottom: 25px;
+        border: 1px solid red;
+        justify-content: center;
+        width: 100%;
+        height: 100%;    
+        gap: 2%;
+        &-menu{
+          width: 50%;
+          padding: 0;
+          list-style-type: none;
+          overflow: hidden;
           border: 1px solid red;
-          justify-content: center;
-          width: 100%;
-          height: 100%;    
-          gap: 2%;
-          ul.menu{
-            margin: 0;
-            margin-top: 50px;
-            padding: 0;
-            list-style-type: none;
-            overflow: hidden;
-            a
-            {
-              display: block;
-              text-decoration: none;
-              &:hover
-              { 
-                background-color: #181818;
-              };
-            }  
-          }
-          ul#footer-disclaimer.menu {
-            font-size: 0.9rem;
-            color: #717286;
-            cursor:none;
-            margin-bottom: 5%;
-          }      
-
-          &-list {
-              @include create-flex(row);
+          a
+          {
+            display: block;
+            text-decoration: none;
+            &:hover
+            { 
+              background-color: #181818;
+            };
+          }  
+        }
+        &-socials {
+            width: 50%;
+            border: 1px solid red;
+            justify-content: center;
+            flex-wrap: wrap;
+            &-subitem {
               /*border: 1px solid red;*/
-              justify-content: center;
-              flex-wrap: wrap;
-              width: 100%;
-              &-subitem {
-                /*border: 1px solid red;*/
-                width: 32%;
-                text-align: center;
-                p,a{
-                  cursor: pointer;
-                }
-            }                
-          }
+              width: 32%;
+              text-align: center;
+              p,a{
+                cursor: pointer;
+              }
+          }                
+        }
+      }
+      &-item-disclaimer {
+        border: 1px solid red;
+        font-size: 0.7rem;
+        color: #717286;
+        margin-bottom: 5%;
       }
   }
 }  
 
   /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 @media (min-width: 1152px){ 
-.fl-footer {
-  margin-top: 100px;
-  padding: 0 10%;
-  background-color:$background-color-primary;
-  &-list {
+  .fl-footer {
+    padding: 0 10%;
+    &-cnt {
       @include create-flex(column);
-      align-items: center;
-      justify-content: space-around;
-      width: 100%;
-      height: 100%;
-      &-item {
-          &-list {
-              @include create-flex(row);
-              /*border: 1px solid red;*/
-              justify-content: space-around;
-              width: 100%;
-              &-subitem {
-                /*border: 1px solid red;*/
-                width: 25%;
-                p,a{
-                  cursor: pointer;
-                }
-            }                
+      align-items: center;      
+      &-item-links {
+        @include create-flex(row);
+        margin-top: 3px;
+        margin-bottom: 25px;
+        &-menu{
+          margin: 50px 0px 25px;
+          padding: 0;
+          list-style-type: none;
+          overflow: hidden;
+          a
+          {
+            display: block;
+            text-decoration: none;
+            &:hover
+            { 
+              background-color: #181818;
+            };
+          }  
+        }  
+        &-socials {
+            @include create-flex(row);
+            justify-content: center;
+            flex-wrap: wrap;
+            &-subitem {
+              width: 32%;
+              text-align: center;
+              p,a{
+                cursor: pointer;
+              }
           }
-          }
+        }    
       }
+      &-item-disclaimer {
+        font-size: 0.9rem;
+      }
+    }
   }
 }    
