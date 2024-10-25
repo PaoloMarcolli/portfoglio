@@ -2,6 +2,7 @@
 /*$background-color-primary:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
 /* Canvas colors */
 /* Base mixin */
+/* Horizontal list */
 /*.card:hover{
   box-shadow: 2px 2px 2px 2px  #02020277;    
   transform: scale(1.009);
@@ -27,6 +28,7 @@
 /* Footer Module */
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-footer {
+  border: 1px dotted red;
   margin-top: 100px;
   padding: 0 2%;
   background-color: #212121 !important;
@@ -34,28 +36,28 @@
 .fl-footer-cnt {
   display: flex;
   flex-direction: column;
+  border: 1px dotted red;
   align-items: center;
-  border: 1px solid red;
   width: 100%;
   height: 100%;
 }
 .fl-footer-cnt-item-links {
   display: flex;
   flex-direction: row;
+  border: 1px dotted red;
   margin-top: 3px;
   margin-bottom: 25px;
-  border: 1px solid red;
   justify-content: center;
   width: 100%;
   height: 100%;
   gap: 2%;
 }
 .fl-footer-cnt-item-links-menu {
+  border: 1px dotted red;
   width: 50%;
   padding: 0;
   list-style-type: none;
   overflow: hidden;
-  border: 1px solid red;
 }
 .fl-footer-cnt-item-links-menu a {
   display: block;
@@ -65,8 +67,8 @@
   background-color: #181818;
 }
 .fl-footer-cnt-item-links-socials {
+  border: 1px dotted red;
   width: 50%;
-  border: 1px solid red;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -79,7 +81,7 @@
   cursor: pointer;
 }
 .fl-footer-cnt-item-disclaimer {
-  border: 1px solid red;
+  border: 1px dotted red;
   font-size: 0.7rem;
   color: #717286;
   margin-bottom: 5%;

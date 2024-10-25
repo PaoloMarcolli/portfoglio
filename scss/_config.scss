@@ -48,3 +48,9 @@ $secondary-canvas-color: #212121;
 
 }
   
+/* Horizontal list */
+@mixin showBordersTest($showBoders: false) {
+    @if $showBoders {
+        border: 1px dotted red;    
+    }
+  }

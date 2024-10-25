@@ -1,31 +1,33 @@
 /* Footer Module */
 
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
-.fl-footer {
+.fl-footer {  
+  @include showBordersTest(true);
   margin-top: 100px;
   padding: 0 2%;
   background-color:$background-color-primary;
   &-cnt {
       @include create-flex(column);
+      @include showBordersTest(true);
       align-items: center;
-      border: 1px solid red;
       width: 100%;
       height: 100%;
       &-item-links {
         @include create-flex(row);
+        @include showBordersTest(true);
         margin-top: 3px;
         margin-bottom: 25px;
-        border: 1px solid red;
+        
         justify-content: center;
         width: 100%;
         height: 100%;    
         gap: 2%;
         &-menu{
+          @include showBordersTest(true);
           width: 50%;
           padding: 0;
           list-style-type: none;
           overflow: hidden;
-          border: 1px solid red;
           a
           {
             display: block;
@@ -37,8 +39,8 @@
           }  
         }
         &-socials {
+            @include showBordersTest(true);
             width: 50%;
-            border: 1px solid red;
             justify-content: center;
             flex-wrap: wrap;
             &-subitem {
@@ -52,7 +54,7 @@
         }
       }
       &-item-disclaimer {
-        border: 1px solid red;
+        @include showBordersTest(true);
         font-size: 0.7rem;
         color: #717286;
         margin-bottom: 5%;

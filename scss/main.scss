@@ -1,15 +1,12 @@
 @import 'config';
 @import 'bootstrap-override';
-@import 'btn-scroll-to-top';
-@import 'footer';
-@import 'who-i-am';
-@import 'curriculum';
-@import 'projects';
-@import 'contact';
-
+@import 'elements';
+@import 'layout';
+@import 'pages';
 
 * a{
   //color: rgb(185, 183, 183);
+  @include showBordersTest();
   @include base-color(); 
   &:hover{
     @include base-color(); 
