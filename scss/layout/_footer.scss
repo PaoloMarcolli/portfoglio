@@ -50,7 +50,7 @@ $margin-footer-bottom: 25px;
 }  
 
   /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
-@media (min-width: 1152px){ 
+@media (min-width: 1024px){ 
   .fl-footer {
     padding: getMarginTopBottomResponsive(false) getMarginLeftRightResponsive(false) ;
     &-cnt {

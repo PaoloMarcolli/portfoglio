@@ -95,7 +95,7 @@
 }
 
 /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
-@media (min-width: 1152px) {
+@media (min-width: 1024px) {
   .fl-footer {
     padding: 2.5% 20%;
   }
@@ -336,7 +336,7 @@
   height: 100vh;
   color: #fff;
   background-color: #fff;
-  background: url("../img/background-04.jpg");
+  background: url("../img/background-10.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -381,7 +381,7 @@
 }
 
 /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
-@media (min-width: 1152px) {
+@media (min-width: 1024px) {
   /* Layout structure ( using nesting SASS syntax ) */
   .fl-page {
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -389,7 +389,7 @@
     height: 100vh;
     color: #fff;
     background-color: #fff;
-    background: url("../img/background-04.jpg");
+    background: url("../img/background-10.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
