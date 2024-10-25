@@ -1,64 +1,50 @@
 /* Footer Module */
-$margin-footer-top: 100px;
+$margin-footer-top: 25px;
+$margin-footer-bottom: 25px;
 
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-footer {  
-  @include showBordersTest(true);
-  margin-top: $margin-footer-top;
-  padding: 0 getMarginResponsive(true);
+  @include showBordersTest(false);
+  border-top:1px solid $background-color-secondary;
+  padding: getMarginTopBottomResponsive(true) getMarginLeftRightResponsive(true);
   background-color:$background-color-primary;
   &-cnt {
-      @include createFlex(column);
-      @include showBordersTest(true);
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      &-item-links {
-        @include createFlex(row);
-        @include showBordersTest(true);
-        margin-top: 3px;
-        margin-bottom: 25px;
-        
-        justify-content: center;
-        width: 100%;
-        height: 100%;    
-        gap: 2%;
-        &-menu{
-          @include showBordersTest(true);
-          width: 50%;
+      @include showBordersTest(false);
+      &-item-menu{
+        @include showBordersTest(false);
+        ul{
+          @include showBordersTest(false);
+          @include anchorBaseRule();
           padding: 0;
           list-style-type: none;
           overflow: hidden;
-          a
-          {
-            display: block;
-            text-decoration: none;
-            &:hover
-            { 
-              background-color: #181818;
-            };
-          }  
         }
-        &-socials {
-            @include showBordersTest(true);
-            width: 50%;
-            justify-content: center;
-            flex-wrap: wrap;
-            &-subitem {
-              /*border: 1px solid red;*/
-              width: 32%;
-              text-align: center;
-              p,a{
-                cursor: pointer;
-              }
-          }                
-        }
+        margin-bottom: calc($margin-footer-bottom - 25px);
       }
+      &-item-links {
+        @include showBordersTest(false);
+        ul{
+          @include showBordersTest(false);
+          @include anchorBaseRule();
+          display: flex;
+          justify-content: center;
+          padding: 0;
+          list-style-type: none;
+          overflow: hidden;  
+        }
+        margin-top: 3px;
+        margin-bottom: calc($margin-footer-bottom - 25px);
+      }
+      &-item-hr{
+        @include showBordersTest(false);
+        color:#FFFFFF;
+        opacity: 0.9;
+        size: 3px;
+      }      
       &-item-disclaimer {
-        @include showBordersTest(true);
+        @include showBordersTest(false);
         font-size: 0.7rem;
-        color: #717286;
-        margin-bottom: 5%;
+        color:#717286;
       }
   }
 }  
@@ -66,41 +52,13 @@ $margin-footer-top: 100px;
   /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 @media (min-width: 1152px){ 
   .fl-footer {
-    padding: 0 getMarginResponsive(false);
+    padding: getMarginTopBottomResponsive(false) getMarginLeftRightResponsive(false) ;
     &-cnt {
-      @include createFlex(column);
-      align-items: center;      
       &-item-links {
-        @include createFlex(row);
-        margin-top: 3px;
-        margin-bottom: 25px;
-        &-menu{
-          margin: 50px 0px 25px;
-          padding: 0;
-          list-style-type: none;
-          overflow: hidden;
-          a
-          {
-            display: block;
-            text-decoration: none;
-            &:hover
-            { 
-              background-color: #181818;
-            };
-          }  
-        }  
-        &-socials {
-            @include createFlex(row);
-            justify-content: center;
-            flex-wrap: wrap;
-            &-subitem {
-              width: 32%;
-              text-align: center;
-              p,a{
-                cursor: pointer;
-              }
-          }
-        }    
+        margin-bottom: $margin-footer-bottom; 
+      }
+      &-item-menu{ 
+        margin-bottom: $margin-footer-bottom;
       }
       &-item-disclaimer {
         font-size: 0.9rem;

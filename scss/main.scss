@@ -1,138 +1,8 @@
 @import 'config';
 @import 'bootstrap-override';
 @import 'elements/btn-scroll-to-top';
-@import 'layout/footer';
+@import 'layout/footer','layout/header';
 @import 'pages/contact','pages/curriculum','pages/projects','pages/who-i-am';
-
-* a{
-  //color: rgb(185, 183, 183);
-  @include base-color(); 
-  &:hover{
-    @include base-color(); 
-  }   
-}
-
-
-/*
-.projects {
-  padding-bottom: 2rem;
-
-  &__bio-image {
-    height: 30vh;
-    width: 100%;
-    background: 
-      linear-gradient(
-        to right,
-        rgba($primary-color, 0.9),
-        rgba($primary-color, 0.3)
-      ),
-      url('../img/model-1.jpg') center top;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
-    .text-secondary {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-  }
-
-  &__items {
-    width: 60vw;
-    margin: 2rem auto 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 2rem;
-  }
-
-  &__item {
-    position: relative;
-    border-bottom: 5px solid $secondary-color;
-    overflow: hidden;
-    cursor: pointer;
-
-    img {
-      width: 100%;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: $secondary-color;
-      opacity: 0;
-      @include transition-ease;
-    }
-
-    &:hover {
-      &::after {
-        top: 0;
-        opacity: 0.9;
-      }
-      .projects__btn {
-        opacity: 1;
-      }
-    }
-  }
-
-  &__btns {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    text-align: center;
-  }
-
-  &__btn {
-    opacity: 0;
-    color: set-text-color($secondary-color);
-    @include transition-ease;
-
-    &:hover {
-      color: set-text-color(set-text-color($secondary-color));
-    }
-  }
-
-
-  footer {
-    transform:
-      rotate(90deg)
-      translate(-3rem, -5rem);
-  }
-  
-}
-*/
-
-/*
-#btn-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
-
-  &:hover {
-    background-color: #555; 
-  }
-}
-*/
 
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-page {
@@ -141,100 +11,11 @@
   align-items: center;
   width: 100%;
   
-  /* Responsive header ( using nesting SASS syntax ) */
-  .fl-header{
-    background-color: #212121de;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-    position: fixed;    
-    width: 100%;
-    z-index: 1;
-    ul{
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      overflow: hidden;
-
-      a
-      {
-        display: block;
-        /*border-right: 1px solid red;*/
-        padding: 20px 20px;
-        text-decoration: none;
-        &:hover
-        { 
-          background-color: #181818;
-        };
-      }    
-    }
-    .logo{
-      @include base-color();
-      margin-top: 5px;
-      text-decoration: none;
-      text-transform:capitalize;    
-      display: flex;
-      padding: 10px 10px;
-      flex-direction: row;
-      justify-content: start;
-      float: left;  
-    }
-    .menu{
-      clear: both;
-      max-height: 0;
-      transition: max-height 1.2s ease-out
-    }  
-    .menu-icon{
-      /*border: 1px solid red;*/
-      padding: 28px 20px;
-      position: relative;
-      float: right;
-      cursor: pointer;
-      .nav-icon
-      {
-        background-color: #FFF;
-        display: block;
-        width: 18px;
-        height: 2px;
-        position: relative;
-        transition: background-color .2s ease-out;
-        &:before,
-        &:after{
-          background-color: #FFF;
-          display: block;
-          width: 100%;
-          height: 100%;
-          content: "";
-          position: absolute;
-          transition: all 1.2s ease-out;
-          top: 5px;    
-        }
-        &::before{top: -5px;}
-      }    
-    }  
-    .menu-btn{
-      display: none;
-    }  
-    .menu-btn:checked ~ .menu{
-      max-height: 240px;
-      &.menu-icon{
-        .nav-icon{
-          background-color: transparent;
-        } 
-        .nav-icon::before{
-          transform: rotate(-45deg);
-          top: 0px;
-        }
-        .nav-icon::after{
-          transform: rotate(45deg);
-          top: 0px;
-        }
-      }
-    }
-  }
   /* Responsive main  ( using nesting SASS syntax ) */
   .fl-main {
     @include createFlex(row);
     border-radius: 10px;
-    margin: 70px getMarginResponsive(true);
+    margin: calc(getMarginTopBottomResponsive(true) * 8) getMarginLeftRightResponsive(true);
     justify-content: center;
     .cnt-main {
       @include base-color-main();
@@ -249,32 +30,7 @@
         scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
       }
     } 
-    .social-icons {
-      position: fixed;
-      bottom: 0; 
-      right: 0; 
-      z-index: 1;      
-      @include createFlex(column);
-      opacity: 1.75;                /* Opacity (Transparency) */
-      color: rgba(255,255, 255, 1);   /* RGBA Color (Alternative Transparency) */
-      a {
-        background-color: white;
-        color: #70726F;
-        font-size: 20px;
-        padding: 5px;
-        transition: all .5s ease;
-        /*&:hover {
-          color: white;  
-        } */ 
-      }     
-    }  
   } 
-  /* Responsive footer ( using nesting SASS syntax ) */
-  /*.fl-footer {
-    margin-top: 100px;
-    height: 10%;
-    background-color:red;
-  }*/    
 }
 
 /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
@@ -283,7 +39,7 @@
     .fl-page {
       @include base-page-properties();
       /* Responsive header ( using nesting SASS syntax ) */    
-      .fl-header {
+      /*.fl-header {
         li{
           float: left;
           a{
@@ -293,15 +49,15 @@
         .menu{
           clear: none;
           float: right;
-          max-height: 240px;
+          max-height: 260px;
         }
         .menu-icon{
           display: none;
         }      
-      }
+      }*/
       .fl-main {
         @include createFlex(row);
-        margin: 80px getMarginResponsive(false);
+        margin: calc( getMarginTopBottomResponsive(false) * 3.5) getMarginLeftRightResponsive(false);
         justify-content: center;
         flex-wrap: wrap;
         .cnt-main {
@@ -313,6 +69,7 @@
             @include base-color-main();
             margin-bottom: 0%;
             width: 47%;
+            max-height: 500px;
             > p{
               width: fit-content;
             }

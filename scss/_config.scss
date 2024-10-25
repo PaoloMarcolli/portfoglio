@@ -1,6 +1,6 @@
 /* Base colors */
 /*$background-color-primary:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
-$background-color-primary:  #212121!important;
+$background-color-primary:  #000000!important;
 $background-color-secondary:  #fff!important;
 $background-color-with-gradient: radial-gradient(circle, rgb(179, 176, 176), black);
 $primary-color: #fff;
@@ -12,7 +12,10 @@ $background-color-canvas-third:  rgb(173, 201, 226);
 $primary-canvas-color: #212121;
 $secondary-canvas-color: #212121;
 /* Margins */
-$margin:2.5%;
+$margin-default-left-rigth:2.5%;
+$margin-default-top-bottom:2.5%;
+/* background-image */
+$background-image: url('../img/background-04.jpg');
 
 /* Mixin for test application */
 
@@ -25,12 +28,23 @@ $margin:2.5%;
 
 /* Function for mantain proportional margin,fonts,colors */
 
-/* Get margin responsive function */
-@function getMarginResponsive($IsMobileDevice: true) {
+/* Get margin left,right responsive function */
+@function getMarginLeftRightResponsive($IsMobileDevice: true) {
+    $margin: 0;
     @if $IsMobileDevice {
-        $margin: 2.5%;        
+        $margin: $margin-default-left-rigth;        
     } @else {
-        $margin:$margin*4;
+        $margin: $margin-default-left-rigth * 8;
+    }
+    @return $margin;
+}
+/* Get margin top,bottom responsive function */
+@function getMarginTopBottomResponsive($IsMobileDevice: true) {
+    $margin: 0;
+    @if $IsMobileDevice {
+        $margin: $margin-default-top-bottom;        
+    } @else {
+        $margin: $margin-default-top-bottom ;
     }
     @return $margin;
 }
@@ -52,6 +66,10 @@ $margin:2.5%;
     height: 100vh;
     color: $primary-color;    
     background-color: #fff;
+    background: $background-image ;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;    
     /*background:  $background-color-with-gradient;*/
     /*background: 
     linear-gradient(
@@ -63,7 +81,20 @@ $margin:2.5%;
     background-repeat: no-repeat;
     background-size:contain;*/
 }
-  
+/* Anchor base rules */
+@mixin anchorBaseRule {
+    a{
+        text-decoration: none;
+        display: block;
+        color: $primary-color;
+        &:hover
+        { 
+          background-color: #181818;
+        };
+    };
+}
+
+
 /* Function add flex-box */
 @mixin createFlex($direction) {
     display: flex;

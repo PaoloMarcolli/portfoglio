@@ -13,3 +13,16 @@
     
   }
   
+
+  // Rimozione dei gutter e altre proprietà di colonna
+@mixin make-col-ready-no-gutter() {
+  position: relative;
+  width: 100%;
+  padding-right: 0; // Rimuove il padding destro
+  padding-left: 0;  // Rimuove il padding sinistro
+}
+
+// Applica make-col-ready-no-gutter a una colonna specifica
+.no-gutter-column {
+  @include make-col-ready-no-gutter();
+}
