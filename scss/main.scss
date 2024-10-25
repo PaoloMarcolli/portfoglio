@@ -234,8 +234,7 @@
   .fl-main {
     @include createFlex(row);
     border-radius: 10px;
-    margin: 0 2.5%;
-    margin-top: 70px;
+    margin: 70px getMarginResponsive(true);
     justify-content: center;
     .cnt-main {
       @include base-color-main();
@@ -302,8 +301,7 @@
       }
       .fl-main {
         @include createFlex(row);
-        margin: 0 10%;
-        margin-top: 80px;
+        margin: 80px getMarginResponsive(false);
         justify-content: center;
         flex-wrap: wrap;
         .cnt-main {

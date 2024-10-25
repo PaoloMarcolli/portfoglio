@@ -5,7 +5,7 @@ $margin-footer-top: 100px;
 .fl-footer {  
   @include showBordersTest(true);
   margin-top: $margin-footer-top;
-  padding: 0 2%;
+  padding: 0 getMarginResponsive(true);
   background-color:$background-color-primary;
   &-cnt {
       @include createFlex(column);
@@ -66,7 +66,7 @@ $margin-footer-top: 100px;
   /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 @media (min-width: 1152px){ 
   .fl-footer {
-    padding: 0 10%;
+    padding: 0 getMarginResponsive(false);
     &-cnt {
       @include createFlex(column);
       align-items: center;      

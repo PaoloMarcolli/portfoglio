@@ -1,8 +1,15 @@
 /* Base colors */
 /*$background-color-primary:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
 /* Canvas colors */
-/* Base mixin */
+/* Margins */
+/* Mixin for test application */
 /* Show borders test */
+/* Function for mantain proportional margin,fonts,colors */
+/* Get margin responsive function */
+/* Base color */
+/* Base color */
+/* Base color */
+/* Function add flex-box */
 /*.card:hover{
   box-shadow: 2px 2px 2px 2px  #02020277;    
   transform: scale(1.009);
@@ -30,7 +37,7 @@
 .fl-footer {
   border: 1px dotted red;
   margin-top: 100px;
-  padding: 0 2%;
+  padding: 0 2.5%;
   background-color: #212121 !important;
 }
 .fl-footer-cnt {
@@ -90,7 +97,7 @@
 /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 @media (min-width: 1152px) {
   .fl-footer {
-    padding: 0 10%;
+    padding: 0 2.5%;
   }
   .fl-footer-cnt {
     display: flex;
@@ -498,8 +505,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  margin: 0 2.5%;
-  margin-top: 70px;
+  margin: 70px 2.5%;
   justify-content: center;
 }
 .fl-page .fl-main .cnt-main {
@@ -577,8 +583,7 @@
   .fl-page .fl-main {
     display: flex;
     flex-direction: row;
-    margin: 0 10%;
-    margin-top: 80px;
+    margin: 80px 2.5%;
     justify-content: center;
     flex-wrap: wrap;
   }

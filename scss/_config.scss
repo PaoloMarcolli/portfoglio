@@ -11,24 +11,41 @@ $background-color-canvas-secondary: rgb(48, 99, 145);
 $background-color-canvas-third:  rgb(173, 201, 226);
 $primary-canvas-color: #212121;
 $secondary-canvas-color: #212121;
+/* Margins */
+$margin:2.5%;
 
-/* Base mixin */
-@mixin createFlex($direction) {
-    display: flex;
-    flex-direction: $direction;
+/* Mixin for test application */
+
+/* Show borders test */
+@mixin showBordersTest($showBoders: false) {
+    @if $showBoders {
+        border: 1px dotted red;    
+    }
 }
-  
+
+/* Function for mantain proportional margin,fonts,colors */
+
+/* Get margin responsive function */
+@function getMarginResponsive($IsMobileDevice: true) {
+    @if $IsMobileDevice {
+        $margin: 2.5%;        
+    } @else {
+        $margin:$margin*4;
+    }
+    @return $margin;
+}
+/* Base color */
 @mixin base-color {
     color: $primary-color;
     --bs-bg-opacity: 1;
     background-color: $background-color-primary;
 }
-  
+/* Base color */  
 @mixin base-color-main {
     color: $primary-color;
     background-color: transparent ;
 }
-  
+/* Base color */  
 @mixin base-page-properties {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
@@ -45,12 +62,10 @@ $secondary-canvas-color: #212121;
     url('../img/model-1.jpg') ;
     background-repeat: no-repeat;
     background-size:contain;*/
-
 }
   
-/* Show borders test */
-@mixin showBordersTest($showBoders: false) {
-    @if $showBoders {
-        border: 1px dotted red;    
-    }
-  }
+/* Function add flex-box */
+@mixin createFlex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
