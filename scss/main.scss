@@ -1,12 +1,11 @@
 @import 'config';
 @import 'bootstrap-override';
-@import 'elements';
-@import 'layout';
-@import 'pages';
+@import 'elements/btn-scroll-to-top';
+@import 'layout/footer';
+@import 'pages/contact','pages/curriculum','pages/projects','pages/who-i-am';
 
 * a{
   //color: rgb(185, 183, 183);
-  @include showBordersTest();
   @include base-color(); 
   &:hover{
     @include base-color(); 
@@ -138,7 +137,7 @@
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-page {
   @include base-page-properties();
-  @include create-flex(column);
+  @include createFlex(column);
   align-items: center;
   width: 100%;
   
@@ -233,14 +232,14 @@
   }
   /* Responsive main  ( using nesting SASS syntax ) */
   .fl-main {
-    @include create-flex(row);
+    @include createFlex(row);
     border-radius: 10px;
     margin: 0 2.5%;
     margin-top: 70px;
     justify-content: center;
     .cnt-main {
       @include base-color-main();
-      @include create-flex(column);
+      @include createFlex(column);
       justify-content: flex-start;
       flex-wrap: nowrap;
       width: 95%;
@@ -256,7 +255,7 @@
       bottom: 0; 
       right: 0; 
       z-index: 1;      
-      @include create-flex(column);
+      @include createFlex(column);
       opacity: 1.75;                /* Opacity (Transparency) */
       color: rgba(255,255, 255, 1);   /* RGBA Color (Alternative Transparency) */
       a {
@@ -302,13 +301,13 @@
         }      
       }
       .fl-main {
-        @include create-flex(row);
+        @include createFlex(row);
         margin: 0 10%;
         margin-top: 80px;
         justify-content: center;
         flex-wrap: wrap;
         .cnt-main {
-          @include create-flex(row);
+          @include createFlex(row);
           justify-content: center;
           flex-wrap: wrap;    
           gap: 2%;

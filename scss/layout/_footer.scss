@@ -1,19 +1,20 @@
 /* Footer Module */
+$margin-footer-top: 100px;
 
 /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
 .fl-footer {  
   @include showBordersTest(true);
-  margin-top: 100px;
+  margin-top: $margin-footer-top;
   padding: 0 2%;
   background-color:$background-color-primary;
   &-cnt {
-      @include create-flex(column);
+      @include createFlex(column);
       @include showBordersTest(true);
       align-items: center;
       width: 100%;
       height: 100%;
       &-item-links {
-        @include create-flex(row);
+        @include createFlex(row);
         @include showBordersTest(true);
         margin-top: 3px;
         margin-bottom: 25px;
@@ -67,10 +68,10 @@
   .fl-footer {
     padding: 0 10%;
     &-cnt {
-      @include create-flex(column);
+      @include createFlex(column);
       align-items: center;      
       &-item-links {
-        @include create-flex(row);
+        @include createFlex(row);
         margin-top: 3px;
         margin-bottom: 25px;
         &-menu{
@@ -89,7 +90,7 @@
           }  
         }  
         &-socials {
-            @include create-flex(row);
+            @include createFlex(row);
             justify-content: center;
             flex-wrap: wrap;
             &-subitem {

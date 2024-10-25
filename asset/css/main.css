@@ -2,7 +2,7 @@
 /*$background-color-primary:  rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;*/
 /* Canvas colors */
 /* Base mixin */
-/* Horizontal list */
+/* Show borders test */
 /*.card:hover{
   box-shadow: 2px 2px 2px 2px  #02020277;    
   transform: scale(1.009);
@@ -133,28 +133,6 @@
     font-size: 0.9rem;
   }
 }
-#who-i-am .home {
-  height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.3)), url("../img/model-1.jpg");
-  background-repeat: no-repeat;
-  background-size: 100px 100px;
-  background-size: contain;
-}
-#who-i-am .home__name {
-  font-size: 5rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid set-text-color(#fff);
-}
-#who-i-am .home__name--last {
-  color: #fff;
-  font-weight: 700;
-}
-
 .woork-sheet {
   /* Style the tab */
   /* Style the buttons that are used to open the tab content */
@@ -247,6 +225,28 @@
 }
 #projects .fl-projects-list-item img {
   width: 100%;
+}
+
+#who-i-am .home {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0.3)), url("../img/model-1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-size: contain;
+}
+#who-i-am .home__name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid set-text-color(#fff);
+}
+#who-i-am .home__name--last {
+  color: #fff;
+  font-weight: 700;
 }
 
 * a {

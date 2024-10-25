@@ -13,7 +13,7 @@ $primary-canvas-color: #212121;
 $secondary-canvas-color: #212121;
 
 /* Base mixin */
-@mixin create-flex($direction) {
+@mixin createFlex($direction) {
     display: flex;
     flex-direction: $direction;
 }
@@ -48,7 +48,7 @@ $secondary-canvas-color: #212121;
 
 }
   
-/* Horizontal list */
+/* Show borders test */
 @mixin showBordersTest($showBoders: false) {
     @if $showBoders {
         border: 1px dotted red;    
