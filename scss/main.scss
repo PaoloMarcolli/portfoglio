@@ -34,12 +34,6 @@
   }
 }
 */
-.hacker-text {
-  color: #00ff00; /* Colore verde brillante */
-  font-size: 24px; /* Dimensione del testo */
-  font-weight: bold;
-  text-shadow: 0 0 10px #00ff00; /* Effetto bagliore verde */
-}
 
 .rock-text {
   font-size: 17px; /* Large text size */
@@ -104,33 +98,6 @@ img {
 
 .slide:nth-child(3) {
   animation-delay: 20s; /* Show third slide after 20 seconds */
-}
-
-.mycontainer {
-  width: auto; /* Larghezza del contenitore */
-  height: 100%; /* Altezza del contenitore */
-  @include showBordersTest(true);
-  overflow: hidden; /* Nascondi il testo in eccesso */
-  padding-right: 2px;
-}
-
-.scrolling-text {
-  animation: scroll 4s linear infinite; /* Applica l'animazione */
-  font-size: 0.7rem; /* Dimensione del testo */
-  font-style: italic;
-  position: absolute; /* Posizionamento assoluto per il testo */
-  color: $primary-color; /* Colore del testo */
-  text-wrap: wrap;
-  text-align: center;
-}
-
-@keyframes scroll {
-  0% {
-      transform: translateY(0); /* Inizia nella posizione iniziale */
-  }
-  100% {
-      transform: translateY(100%); /* Termina completamente a sinistra */
-  }
 }
 
 

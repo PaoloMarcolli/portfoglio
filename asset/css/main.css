@@ -171,7 +171,7 @@ body {
   width: 100%;
 }
 
-#who-i-am .who-i-am {
+#who-i-am.cnt-main-item .who-i-am {
   /*
     height: 100%;
     padding-top: 40vh;
@@ -188,6 +188,30 @@ body {
         font-weight: 700;
       }
     }*/
+}
+#who-i-am.cnt-main-item .who-i-am .cnt-scrolling-text {
+  width: auto; /* Larghezza del contenitore */
+  height: 100%; /* Altezza del contenitore */
+  overflow: hidden; /* Nascondi il testo in eccesso */
+}
+#who-i-am.cnt-main-item .who-i-am .cnt-item-text {
+  border: 1px dotted red;
+  animation: frm-scroll 5s linear infinite; /* Applica l'animazione */
+  font-size: 0.7rem; /* Dimensione del testo */
+  font-style: italic;
+  position: absolute; /* Posizionamento assoluto per il testo */
+  color: #FFFFFF !important; /* Colore del testo */
+  text-wrap: wrap;
+  text-align: center;
+  margin-right: 5px;
+}
+@keyframes frm-scroll {
+  0% {
+    transform: translateY(0); /* Inizia nella posizione iniziale */
+  }
+  100% {
+    transform: translateY(100%); /* Termina completamente a sinistra */
+  }
 }
 
 /*
@@ -206,13 +230,6 @@ body {
   }
 }
 */
-.hacker-text {
-  color: #00ff00; /* Colore verde brillante */
-  font-size: 24px; /* Dimensione del testo */
-  font-weight: bold;
-  text-shadow: 0 0 10px #00ff00; /* Effetto bagliore verde */
-}
-
 .rock-text {
   font-size: 17px; /* Large text size */
   font-weight: bold;
@@ -282,32 +299,6 @@ img {
   animation-delay: 20s; /* Show third slide after 20 seconds */
 }
 
-.mycontainer {
-  width: auto; /* Larghezza del contenitore */
-  height: 100%; /* Altezza del contenitore */
-  border: 1px dotted red;
-  overflow: hidden; /* Nascondi il testo in eccesso */
-  padding-right: 2px;
-}
-
-.scrolling-text {
-  animation: scroll 4s linear infinite; /* Applica l'animazione */
-  font-size: 0.7rem; /* Dimensione del testo */
-  font-style: italic;
-  position: absolute; /* Posizionamento assoluto per il testo */
-  color: #FFFFFF !important; /* Colore del testo */
-  text-wrap: wrap;
-  text-align: center;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(0); /* Inizia nella posizione iniziale */
-  }
-  100% {
-    transform: translateY(100%); /* Termina completamente a sinistra */
-  }
-}
 .fl-page {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin: 0;
