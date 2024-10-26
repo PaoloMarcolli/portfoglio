@@ -13,18 +13,16 @@ body {
   background-color: $background-color-primary;
 }
 
-.card {
-  /* Sfondo delle card */
-  background-color: $background-color-primary; 
-  /* Colore del testo nelle card */
-  color: $primary-color; 
-  border: 1px solid $primary-color;
-}
-
 // Sovrascrivi le variabili per il tema scuro
 .card{
+    /* Sfondo delle card */
+    background-color: $background-color-primary; 
+    /* Colore del testo nelle card */
+    color: $primary-color; 
+    border: 1px solid $primary-color;
     box-shadow: 2px 2px 2px 2px  $background-color-primary; 
     opacity: 0.85;   
+    height: 100%;
     &:hover{
       transform: scale(1.009);  
       box-shadow: 3px 3px 3px 3px  $background-color-primary;
@@ -35,8 +33,7 @@ body {
     } 
   }
   
-
-  // Rimozione dei gutter e altre proprietà di colonna
+// Rimozione dei gutter e altre proprietà di colonna
 @mixin make-col-ready-no-gutter() {
   position: relative;
   width: 100%;

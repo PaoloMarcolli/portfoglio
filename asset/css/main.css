@@ -47,11 +47,9 @@ body {
   /* Colore del testo nelle card */
   color: #FFFFFF !important;
   border: 1px solid #FFFFFF !important;
-}
-
-.card {
   box-shadow: 2px 2px 2px 2px #000000 !important;
   opacity: 0.85;
+  height: 100%;
 }
 .card:hover {
   transform: scale(1.009);
@@ -90,13 +88,14 @@ body {
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: 300px;
+  height: 350px;
+  overflow-y: scroll;
 }
 .woork-sheet-tab-header button {
   display: block;
   background-color: inherit;
   color: black;
-  padding: 22px 16px;
+  padding: 22px;
   width: 100%;
   border: none;
   outline: none;
@@ -117,7 +116,8 @@ body {
   border-radius: 0 10px 0 10px;
   width: 70%;
   border-left: none;
-  height: 100%;
+  height: 350px;
+  overflow-y: scroll;
 }
 
 /* Style the tab */
@@ -152,7 +152,6 @@ body {
 /* Style the tab content */
 .cnt-woork-period {
   display: none;
-  padding: 6px 12px;
   border-top: none;
   height: 100%;
 }
@@ -172,24 +171,123 @@ body {
   width: 100%;
 }
 
-#who-i-am .home {
-  height: 100%;
-  padding-top: 40vh;
-  overflow: hidden;
-  align-items: center;
-  text-align: center;
-}
-#who-i-am .home__name {
-  font-size: 5rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 2px solid set-text-color(#FFFFFF !important);
-}
-#who-i-am .home__name--last {
-  color: #FFFFFF !important;
-  font-weight: 700;
+#who-i-am .who-i-am {
+  /*
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    &__name {
+      font-size: 5rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid set-text-color($primary-color);
+      &--last {
+        color: $primary-color;
+        font-weight: 700;
+      }
+    }*/
 }
 
+/*
+.scrolling-text {
+  white-space: nowrap; 
+  animation: scroll 10s linear infinite; 
+  font-size: 24px; 
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+*/
+.slideshow-container {
+  /*position: relative;  Position for absolute positioning of slides */
+  /*max-width: 600px;  Max width of slideshow */
+  border: 1px dotted red;
+  height: 100%;
+  margin: auto; /* Center the slideshow */
+  overflow: hidden; /* Hide overflow */
+  /*border: 2px solid #333;  Optional border for the slideshow */
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+.slide {
+  display: none; /* Hide all slides by default */
+}
+
+img {
+  width: 100%; /* Make image fill the slide */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+/* Automatic slideshow animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* Apply the fade animation to each slide */
+.fade {
+  animation: fade 10s ease-in-out infinite; /* Adjust timing as needed */
+}
+
+/* Show each slide at the right time */
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+  animation-delay: 10s; /* Show second slide after 10 seconds */
+}
+
+.slide:nth-child(3) {
+  animation-delay: 20s; /* Show third slide after 20 seconds */
+}
+
+.mycontainer {
+  width: auto; /* Larghezza del contenitore */
+  height: 100%; /* Altezza del contenitore */
+  border: 1px dotted red;
+  overflow: hidden; /* Nascondi il testo in eccesso */
+  padding-right: 2px;
+}
+
+.scrolling-text {
+  animation: scroll 4s linear infinite; /* Applica l'animazione */
+  font-size: 0.7rem; /* Dimensione del testo */
+  font-style: italic;
+  position: absolute; /* Posizionamento assoluto per il testo */
+  color: #FFFFFF !important; /* Colore del testo */
+  text-wrap: wrap;
+  text-align: center;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0); /* Inizia nella posizione iniziale */
+  }
+  100% {
+    transform: translateY(100%); /* Termina completamente a sinistra */
+  }
+}
 .fl-page {
   font-family: "Inter", Arial, Helvetica, sans-serif;
   margin: 0;
@@ -344,7 +442,7 @@ body {
   color: #FFFFFF !important;
   background-color: transparent;
   width: auto;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
 }
 .fl-page .fl-footer {
@@ -565,9 +663,9 @@ body {
   .fl-page .fl-main .cnt-main .flArticleStructure {
     color: #FFFFFF !important;
     background-color: transparent;
-    margin-bottom: 0%;
     width: 47%;
-    max-height: 500px;
+    margin-bottom: 2%;
+    /*max-height: 500px;*/
   }
   .fl-page .fl-main .cnt-main .flArticleStructure > p {
     width: -moz-fit-content;
