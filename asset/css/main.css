@@ -76,13 +76,6 @@ body {
 }
 
 /* Footer Module */
-.woork-sheet {
-  /* Style the tab */
-  /* Style the buttons that are used to open the tab content */
-  /* Change background color of buttons on hover */
-  /* Create an active/current "tab button" class */
-  /* Style the tab content */
-}
 .woork-sheet-tab-header {
   float: left;
   border: 1px solid #ccc;
@@ -120,14 +113,12 @@ body {
   overflow-y: scroll;
 }
 
-/* Style the tab */
 .woork-period {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
 }
 
-/* Style the buttons inside the tab */
 .woork-period button {
   background-color: inherit;
   float: left;
@@ -139,17 +130,14 @@ body {
   font-size: 17px;
 }
 
-/* Change background color of buttons on hover */
 .woork-period button:hover {
   background-color: #ddd;
 }
 
-/* Create an active/current tablink class */
 .woork-period button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .cnt-woork-period {
   display: none;
   border-top: none;
@@ -171,24 +159,6 @@ body {
   width: 100%;
 }
 
-#who-i-am.cnt-main-item .who-i-am {
-  /*
-    height: 100%;
-    padding-top: 40vh;
-    overflow: hidden;
-    align-items: center;
-    text-align: center;
-    &__name {
-      font-size: 5rem;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid set-text-color($primary-color);
-      &--last {
-        color: $primary-color;
-        font-weight: 700;
-      }
-    }*/
-}
 #who-i-am.cnt-main-item .who-i-am .cnt-scrolling-text {
   width: auto; /* Larghezza del contenitore */
   height: 100%; /* Altezza del contenitore */
@@ -325,14 +295,12 @@ img {
   width: 100%;
 }
 .fl-page .fl-header {
-  /* Responsive header ( using nesting SASS syntax ) */
   background-color: #000000 !important;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   border-bottom: 1px solid #fff !important;
   width: 100%;
   z-index: 1;
-  /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 }
 .fl-page .fl-header ul {
   margin: 0;
@@ -370,7 +338,6 @@ img {
   transition: max-height 1.2s ease-out;
 }
 .fl-page .fl-header .menu-icon {
-  /*border: 1px solid red;*/
   padding: 28px 20px;
   position: relative;
   float: right;
@@ -415,9 +382,6 @@ img {
   top: 0px;
 }
 @media (min-width: 1024px) {
-  .fl-page .fl-header {
-    /* Responsive header ( using nesting SASS syntax ) */
-  }
   .fl-page .fl-header li {
     float: left;
   }
@@ -575,14 +539,12 @@ img {
     background-size:contain;*/
   }
   .fl-page .fl-header {
-    /* Responsive header ( using nesting SASS syntax ) */
     background-color: #000000 !important;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     position: fixed;
     border-bottom: 1px solid #fff !important;
     width: 100%;
     z-index: 1;
-    /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
   }
   .fl-page .fl-header ul {
     margin: 0;
@@ -620,7 +582,6 @@ img {
     transition: max-height 1.2s ease-out;
   }
   .fl-page .fl-header .menu-icon {
-    /*border: 1px solid red;*/
     padding: 28px 20px;
     position: relative;
     float: right;
@@ -666,9 +627,6 @@ img {
   }
 }
 @media (min-width: 1024px) and (min-width: 1024px) {
-  .fl-page .fl-header {
-    /* Responsive header ( using nesting SASS syntax ) */
-  }
   .fl-page .fl-header li {
     float: left;
   }

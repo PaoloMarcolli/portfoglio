@@ -1,6 +1,6 @@
 .woork-sheet{
 
-    /* Style the tab */
+  // Style the tab 
   &-tab-header {
     float: left;
     border: 1px solid #ccc;
@@ -9,7 +9,7 @@
     height: 350px;
     overflow-y: scroll;
   }
-    /* Style the buttons that are used to open the tab content */
+  // Style the buttons that are used to open the tab content 
   &-tab-header button {
     display: block;
     background-color: inherit;
@@ -22,15 +22,15 @@
     cursor: pointer;
     transition: 0.3s;
   }
-  /* Change background color of buttons on hover */
+  // Change background color of buttons on hover
   &-tab-header button:hover {
     background-color: #ddd;
   }
-  /* Create an active/current "tab button" class */
+  // Create an active/current "tab button" class 
   &-tab-header button.active {
     background-color: #ccc;
   }
-  /* Style the tab content */
+  // Style the tab content 
   .cnt-woork-sheet {
     float: left;
     padding: 12px 12px;
@@ -43,14 +43,14 @@
   }  
 }
 
-/* Style the tab */
+// Style the tab 
 .woork-period {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
   }
   
-  /* Style the buttons inside the tab */
+  // Style the buttons inside the tab
   .woork-period button {
     background-color: inherit;
     float: left;
@@ -62,17 +62,17 @@
     font-size: 17px;
   }
   
-  /* Change background color of buttons on hover */
+  // Change background color of buttons on hover 
   .woork-period button:hover {
     background-color: #ddd;
   }
   
-  /* Create an active/current tablink class */
+  // Create an active/current tablink class 
   .woork-period button.active {
     background-color: #ccc;
   }
   
-  /* Style the tab content */
+  // Style the tab content 
   .cnt-woork-period {
     display: none;
     border-top: none;

@@ -1,6 +1,5 @@
 // Mixin per applicare le regole CSS per l'header
 @mixin applyHeaderRule{
-  /* Responsive header ( using nesting SASS syntax ) */
     background-color: $background-color-primary;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
     position: fixed; 
@@ -35,7 +34,7 @@
       transition: max-height 1.2s ease-out
     }  
     .menu-icon{
-      /*border: 1px solid red;*/
+      // border: 1px solid red;
       padding: 28px 20px;
       position: relative;
       float: right;
@@ -83,9 +82,9 @@
     }
 
 
-  /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
+  // Media query when the screen is larger than 1152px ( PC/laptop device )
   @media (min-width: 1024px){ 
-        /* Responsive header ( using nesting SASS syntax ) */    
+        // Responsive header ( using nesting SASS syntax )     
           li{
             float: left;
             a{
