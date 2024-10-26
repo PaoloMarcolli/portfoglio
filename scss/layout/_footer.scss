@@ -2,67 +2,65 @@
 $margin-footer-top: 25px;
 $margin-footer-bottom: 25px;
 
-/* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
-.fl-footer {  
-  @include showBordersTest(false);
-  border-top:1px solid $background-color-secondary;
-  padding: getMarginTopBottomResponsive(true) getMarginLeftRightResponsive(true);
-  background-color:$background-color-primary;
-  &-cnt {
-      @include showBordersTest(false);
-      &-item-menu{
+@mixin applyFooterRule{
+  /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
+    @include showBordersTest(false);
+    border-top:1px solid $background-color-secondary;
+    padding: getMarginTopBottomResponsive(true) getMarginLeftRightResponsive(true);
+    background-color:$background-color-primary;
+    .fl-footer-cnt {
         @include showBordersTest(false);
-        ul{
+        &-item-menu{
           @include showBordersTest(false);
-          @include anchorBaseRule();
-          padding: 0;
-          list-style-type: none;
-          overflow: hidden;
+          ul{
+            @include showBordersTest(false);
+            @include anchorBaseRule();
+            padding: 0;
+            list-style-type: none;
+            overflow: hidden;
+          }
+          margin-bottom: calc($margin-footer-bottom - 25px);
         }
-        margin-bottom: calc($margin-footer-bottom - 25px);
-      }
-      &-item-links {
-        @include showBordersTest(false);
-        ul{
+        &-item-links {
           @include showBordersTest(false);
-          @include anchorBaseRule();
-          display: flex;
-          justify-content: center;
-          padding: 0;
-          list-style-type: none;
-          overflow: hidden;  
+          ul{
+            @include showBordersTest(false);
+            @include anchorBaseRule();
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            list-style-type: none;
+            overflow: hidden;  
+          }
+          margin-top: 3px;
+          margin-bottom: calc($margin-footer-bottom - 25px);
         }
-        margin-top: 3px;
-        margin-bottom: calc($margin-footer-bottom - 25px);
-      }
-      &-item-hr{
-        @include showBordersTest(false);
-        color:#FFFFFF;
-        opacity: 0.9;
-        size: 3px;
-      }      
-      &-item-disclaimer {
-        @include showBordersTest(false);
-        font-size: 0.7rem;
-        color:#717286;
-      }
-  }
-}  
-
-  /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
-@media (min-width: 1024px){ 
-  .fl-footer {
-    padding: getMarginTopBottomResponsive(false) getMarginLeftRightResponsive(false) ;
-    &-cnt {
-      &-item-links {
-        margin-bottom: $margin-footer-bottom; 
-      }
-      &-item-menu{ 
-        margin-bottom: $margin-footer-bottom;
-      }
-      &-item-disclaimer {
-        font-size: 0.9rem;
-      }
+        &-item-hr{
+          @include showBordersTest(false);
+          color:#FFFFFF;
+          opacity: 0.9;
+          size: 3px;
+        }      
+        &-item-disclaimer {
+          @include showBordersTest(false);
+          font-size: 0.7rem;
+          color:#717286;
+        }
     }
-  }
-}    
+
+    /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
+  @media (min-width: 1024px){ 
+      padding: getMarginTopBottomResponsive(false) getMarginLeftRightResponsive(false) ;
+      .fl-footer-cnt {
+        &-item-links {
+          margin-bottom: $margin-footer-bottom; 
+        }
+        &-item-menu{ 
+          margin-bottom: $margin-footer-bottom;
+        }
+        &-item-disclaimer {
+          font-size: 0.9rem;
+        }
+      }
+  }    
+}
