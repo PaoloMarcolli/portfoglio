@@ -428,6 +428,7 @@ img {
   border-radius: 10px;
   margin: 20% 2.5%;
   justify-content: center;
+  /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 }
 .fl-page .fl-main .cnt-main {
   color: #FFFFFF !important;
@@ -444,6 +445,33 @@ img {
   width: auto;
   margin-bottom: 4%;
   scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
+}
+@media (min-width: 1024px) {
+  .fl-page .fl-main .fl-main {
+    display: flex;
+    flex-direction: row;
+    margin: 8.75% 20%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .fl-page .fl-main .fl-main .cnt-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+  .fl-page .fl-main .fl-main .cnt-main .flArticleStructure {
+    color: #FFFFFF !important;
+    background-color: transparent;
+    width: 47%;
+    margin-bottom: 2%;
+    /*max-height: 500px;*/
+  }
+  .fl-page .fl-main .fl-main .cnt-main .flArticleStructure > p {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 .fl-page .fl-footer {
   /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
@@ -649,28 +677,56 @@ img {
   .fl-page .fl-main {
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
+    margin: 20% 2.5%;
+    justify-content: center;
+    /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
+  }
+  .fl-page .fl-main .cnt-main {
+    color: #FFFFFF !important;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 95%;
+  }
+  .fl-page .fl-main .cnt-main .flArticleStructure {
+    color: #FFFFFF !important;
+    background-color: transparent;
+    width: auto;
+    margin-bottom: 4%;
+    scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .fl-page .fl-main .fl-main {
+    display: flex;
+    flex-direction: row;
     margin: 8.75% 20%;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .fl-page .fl-main .cnt-main {
+  .fl-page .fl-main .fl-main .cnt-main {
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2%;
   }
-  .fl-page .fl-main .cnt-main .flArticleStructure {
+  .fl-page .fl-main .fl-main .cnt-main .flArticleStructure {
     color: #FFFFFF !important;
     background-color: transparent;
     width: 47%;
     margin-bottom: 2%;
     /*max-height: 500px;*/
   }
-  .fl-page .fl-main .cnt-main .flArticleStructure > p {
+  .fl-page .fl-main .fl-main .cnt-main .flArticleStructure > p {
     width: -moz-fit-content;
     width: fit-content;
   }
+}
+@media (min-width: 1024px) {
   .fl-page .fl-footer {
     /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
     border-top: 1px solid #fff !important;

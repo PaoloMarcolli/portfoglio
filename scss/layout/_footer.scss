@@ -2,6 +2,7 @@
 $margin-footer-top: 25px;
 $margin-footer-bottom: 25px;
 
+// Mixins per applicare le regole CSS per il footer
 @mixin applyFooterRule{
   /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
     @include showBordersTest(false);

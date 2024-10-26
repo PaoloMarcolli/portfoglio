@@ -1,0 +1,44 @@
+// Mixins per applicare le regole CSS per il main
+@mixin applyMainRule {
+    @include createFlex(row);
+    border-radius: 10px;
+    margin: calc(getMarginTopBottomResponsive(true) * 8) getMarginLeftRightResponsive(true);
+    justify-content: center;
+    .cnt-main {
+    @include base-color-main();
+    @include createFlex(column);
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 95%;
+    .flArticleStructure {
+        @include base-color-main();
+        width: auto;
+        margin-bottom: 4%;
+        scroll-margin-top: 100px; /* Set scroll margin equal to the height of the fixed header */
+    }
+    } 
+    /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
+    @media (min-width: 1024px){ 
+    .fl-main {
+        @include createFlex(row);
+        margin: calc( getMarginTopBottomResponsive(false) * 3.5) getMarginLeftRightResponsive(false);
+        justify-content: center;
+        flex-wrap: wrap;
+        .cnt-main {
+        @include createFlex(row);
+        justify-content: center;
+        flex-wrap: wrap;    
+        gap: 2%;
+        .flArticleStructure {
+            @include base-color-main();
+            width: 47%;
+            margin-bottom: 2%;
+            /*max-height: 500px;*/
+            > p{
+            width: fit-content;
+            }
+        }
+        }      
+    }
+    }    
+} 
