@@ -1,4 +1,4 @@
-// Mixins per applicare le regole CSS per l'header
+// Mixin per applicare le regole CSS per l'header
 @mixin applyHeaderRule{
   /* Responsive header ( using nesting SASS syntax ) */
     background-color: $background-color-primary;

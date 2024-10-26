@@ -34,6 +34,30 @@
   }
 }
 */
+.hacker-text {
+  color: #00ff00; /* Colore verde brillante */
+  font-size: 24px; /* Dimensione del testo */
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ff00; /* Effetto bagliore verde */
+}
+
+.rock-text {
+  font-size: 17px; /* Large text size */
+  font-weight: bold;
+  color: #8b8a8a; /* Dark gray for the text color */
+  text-align: center;
+  text-shadow: 
+      2px 2px 0 #5a5959,  /* Darker shadow for depth */
+      -2px -2px 0 #ffffff, /* Lighter shadow for the raised effect */
+      1px 1px 3px rgba(0, 0, 0, 0.5), /* Extra shadow for contrast */
+      inset 2px 2px 3px #6e6d6d, /* Inner shadow to simulate carving */
+      inset -2px -2px 3px #a2a1a1; /* Inner shadow on opposite side */
+}
+
+.custom-quote {
+  font-style: italic;
+  color: #6c757d; /* Colore grigio Bootstrap */
+}
 
 .slideshow-container {
   /*position: relative;  Position for absolute positioning of slides */
