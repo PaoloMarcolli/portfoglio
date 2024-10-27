@@ -79,15 +79,15 @@ body {
 .woork-sheet-tab-header {
   float: left;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: #000000 !important;
   width: 30%;
-  height: 350px;
+  height: 360px;
   overflow-y: scroll;
 }
 .woork-sheet-tab-header button {
   display: block;
   background-color: inherit;
-  color: black;
+  color: #FFFFFF !important;
   padding: 22px;
   width: 100%;
   border: none;
@@ -97,26 +97,26 @@ body {
   transition: 0.3s;
 }
 .woork-sheet-tab-header button:hover {
-  background-color: #ddd;
+  background-color: #181818;
 }
 .woork-sheet-tab-header button.active {
-  background-color: #ccc;
+  background-color: #fff !important;
 }
 .woork-sheet .cnt-woork-sheet {
   float: left;
   padding: 12px 12px;
-  border: 1px dotted #ccc;
-  border-radius: 0 10px 0 10px;
+  border: 1px solid #fff !important;
   width: 70%;
   border-left: none;
-  height: 350px;
+  height: 360px;
   overflow-y: scroll;
+  background-color: #fff !important;
+  color: #000000 !important;
 }
 
 .woork-period {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
 }
 
 .woork-period button {
@@ -128,14 +128,17 @@ body {
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  text-decoration: line-through;
 }
 
 .woork-period button:hover {
-  background-color: #ddd;
+  background-color: #181818;
 }
 
 .woork-period button.active {
-  background-color: #ccc;
+  background-color: black;
+  text-decoration: none;
+  font-size: larger;
 }
 
 .cnt-woork-period {
