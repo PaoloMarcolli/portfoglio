@@ -1,5 +1,4 @@
 #projects .fl-projects-list {
-    margin-top: 15px;
     @include createFlex(row);
     flex-wrap: wrap;
     justify-content: center;
