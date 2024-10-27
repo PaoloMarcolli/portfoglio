@@ -98,7 +98,6 @@ h1 {
   display: none;
 }
 
-/* Footer Module */
 .woork-sheet-tab-header {
   float: left;
   border: 1px solid #ccc;
@@ -171,12 +170,11 @@ h1 {
 }
 
 #projects .fl-projects-list {
-  margin-top: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 15px !important;
 }
 #projects .fl-projects-list-item {
   width: 46%;
@@ -429,7 +427,6 @@ img {
   border-radius: 10px;
   margin: 20% 2.5%;
   justify-content: center;
-  /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
 }
 .fl-page .fl-main .cnt-main {
   color: #FFFFFF !important;
@@ -675,7 +672,6 @@ img {
     border-radius: 10px;
     margin: 20% 2.5%;
     justify-content: center;
-    /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
   }
   .fl-page .fl-main .cnt-main {
     color: #FFFFFF !important;

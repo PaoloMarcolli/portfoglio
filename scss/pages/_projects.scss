@@ -2,7 +2,7 @@
     @include createFlex(row);
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 15px!important;
     &-item {
       width: 46%;
       img {
