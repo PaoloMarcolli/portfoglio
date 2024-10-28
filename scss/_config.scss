@@ -5,6 +5,7 @@ $background-color-secondary:  #fff!important;
 $background-color-with-gradient: radial-gradient(circle, rgb(179, 176, 176), black)!important;
 $primary-color: #FFFFFF!important;
 $secondary-color: #7a7a7a!important;
+$tertiary-color: #000000!important;
 /* Canvas colors */
 $background-color-canvas-primary:  rgb(83, 144, 197);
 $background-color-canvas-secondary: rgb(48, 99, 145);
@@ -20,7 +21,7 @@ $background-image: url('../img/background-10.jpg');
 /* Mixin for test application */
 
 /* Show borders test */
-@mixin showBordersTest($showBoders: false) {
+@mixin show-borders-test($showBoders: false) {
     @if $showBoders {
         border: 1px dotted red;    
     }
@@ -29,7 +30,7 @@ $background-image: url('../img/background-10.jpg');
 /* Function for mantain proportional margin,fonts,colors */
 
 /* Get margin left,right responsive function */
-@function getMarginLeftRightResponsive($IsMobileDevice: true) {
+@function margin-left-right($IsMobileDevice: true) {
     $margin: 0;
     @if $IsMobileDevice {
         $margin: $margin-default-left-rigth;        
@@ -39,7 +40,7 @@ $background-image: url('../img/background-10.jpg');
     @return $margin;
 }
 /* Get margin top,bottom responsive function */
-@function getMarginTopBottomResponsive($IsMobileDevice: true) {
+@function margin-top-bottom($IsMobileDevice: true) {
     $margin: 0;
     @if $IsMobileDevice {
         $margin: $margin-default-top-bottom;        
@@ -81,8 +82,9 @@ $background-image: url('../img/background-10.jpg');
     background-repeat: no-repeat;
     background-size:contain;*/
 }
+
 /* Anchor base rules */
-@mixin anchorBaseRule {
+@mixin base-anchor-rule {
     a{
         text-decoration: none;
         display: block;
@@ -94,9 +96,8 @@ $background-image: url('../img/background-10.jpg');
     };
 }
 
-
 /* Function add flex-box */
-@mixin createFlex($direction) {
+@mixin base-flex-rule($direction) {
     display: flex;
     flex-direction: $direction;
 }

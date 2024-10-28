@@ -3,19 +3,19 @@ $margin-footer-top: 25px;
 $margin-footer-bottom: 25px;
 
 // Mixin per applicare le regole CSS per il footer
-@mixin applyFooterRule{
+@mixin base-footer-rule{
   /* Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  */
-    @include showBordersTest(false);
+    @include show-borders-test(false);
     border-top:1px solid $background-color-secondary;
-    padding: getMarginTopBottomResponsive(true) getMarginLeftRightResponsive(true);
+    padding: margin-top-bottom(true) margin-left-right(true);
     background-color:$background-color-primary;
     .fl-footer-cnt {
-        @include showBordersTest(false);
+        @include show-borders-test(false);
         &-item-menu{
-          @include showBordersTest(false);
+          @include show-borders-test(false);
           ul{
-            @include showBordersTest(false);
-            @include anchorBaseRule();
+            @include show-borders-test(false);
+            @include base-anchor-rule();
             padding: 0;
             list-style-type: none;
             overflow: hidden;
@@ -23,10 +23,10 @@ $margin-footer-bottom: 25px;
           margin-bottom: calc($margin-footer-bottom - 25px);
         }
         &-item-links {
-          @include showBordersTest(false);
+          @include show-borders-test(false);
           ul{
-            @include showBordersTest(false);
-            @include anchorBaseRule();
+            @include show-borders-test(false);
+            @include base-anchor-rule();
             display: flex;
             justify-content: center;
             padding: 0;
@@ -37,13 +37,13 @@ $margin-footer-bottom: 25px;
           margin-bottom: calc($margin-footer-bottom - 25px);
         }
         &-item-hr{
-          @include showBordersTest(false);
+          @include show-borders-test(false);
           color:#FFFFFF;
           opacity: 0.9;
           size: 3px;
         }      
         &-item-disclaimer {
-          @include showBordersTest(false);
+          @include show-borders-test(false);
           font-size: 0.7rem;
           color:#717286;
         }
@@ -51,7 +51,7 @@ $margin-footer-bottom: 25px;
 
     /* Media query when the screen is larger than 1152px ( PC/laptop device ) */
   @media (min-width: 1024px){ 
-      padding: getMarginTopBottomResponsive(false) getMarginLeftRightResponsive(false) ;
+      padding: margin-top-bottom(false) margin-left-right(false) ;
       .fl-footer-cnt {
         &-item-links {
           margin-bottom: $margin-footer-bottom; 

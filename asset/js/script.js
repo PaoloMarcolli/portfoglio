@@ -26,34 +26,21 @@ window.onload = function() {
       document.getElementById("subject").value = "";
   });
 }
-function openWorkSheet(evt, woorkSheetName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("cnt-woork-sheet");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(woorkSheetName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
 function openWorkSheetPeriod(evt, woorkSheetPeriodName) {
   var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("cnt-woork-period");
+  tabcontent = document.getElementsByClassName("page-curriculum-period");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
-  tablinks = document.getElementsByClassName("tablinks");
+  tablinks = document.getElementsByClassName("tab-curriculum-period");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(woorkSheetPeriodName).style.display = "block";
   evt.currentTarget.className += " active";
+  document.getElementById(woorkSheetPeriodName).scrollTop = 0;
 }
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpenWorkSheet").click();
 document.getElementById("defaultOpenWorkPeriod").click();
 

@@ -16,7 +16,7 @@
 @import 'bootstrap/bootstrap-css-override';
 @import 'elements/btn-scroll-to-top';
 @import 'layout/footer','layout/header','layout/main';
-@import 'pages/contact','pages/curriculum','pages/projects','pages/who-i-am';
+@import 'pages/curriculum','pages/projects','pages/who-i-am';
 
 /*
 .scrolling-text {
@@ -56,7 +56,7 @@
 .slideshow-container {
   /*position: relative;  Position for absolute positioning of slides */
   /*max-width: 600px;  Max width of slideshow */
-  @include showBordersTest(true);
+  @include show-borders-test(true);
   height: 100%;
   margin: auto; /* Center the slideshow */
   overflow: hidden; /* Hide overflow */
@@ -104,20 +104,20 @@ img {
 // Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  
 .fl-page {
   @include base-page-properties();
-  @include createFlex(column);
+  @include base-flex-rule(column);
   align-items: center;
   width: 100%;
   // Responsive header inherits rules from SCSS module
   .fl-header {
-    @include applyHeaderRule;
+    @include base-header-rule;
   }
   // Responsive main  ( using nesting SASS syntax ) 
   .fl-main {
-    @include applyMainRule; 
+    @include base-main-rule; 
   } 
   // Footer inherits rules from SCSS module 
   .fl-footer {
-    @include applyFooterRule;
+    @include base-footer-rule;
   }
 }
 
@@ -129,15 +129,15 @@ img {
 
       // Responsive header inherits rules from SCSS module
       .fl-header {
-        @include applyHeaderRule;
+        @include base-header-rule;
       }
 
       .fl-main {
-        @include applyMainRule;
+        @include base-main-rule;
       }
       // Footer inherits rules from SCSS module
       .fl-footer {
-        @include applyFooterRule;
+        @include base-footer-rule;
       }
     }
 }

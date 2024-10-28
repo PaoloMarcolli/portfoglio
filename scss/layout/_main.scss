@@ -1,12 +1,12 @@
 // Mixin per applicare le regole CSS per il main
-@mixin applyMainRule {
-    @include createFlex(row);
+@mixin base-main-rule {
+    @include base-flex-rule(row);
     border-radius: 10px;
-    margin: calc(getMarginTopBottomResponsive(true) * 8) getMarginLeftRightResponsive(true);
+    margin: calc(margin-top-bottom(true) * 8) margin-left-right(true);
     justify-content: center;
     .cnt-main {
     @include base-color-main();
-    @include createFlex(column);
+    @include base-flex-rule(column);
     justify-content: flex-start;
     flex-wrap: nowrap;
     width: 95%;
@@ -19,12 +19,12 @@
     } 
     // Media query when the screen is larger than 1152px ( PC/laptop device ) */
     @media (min-width: 1024px){ 
-        @include createFlex(row);
-        margin: calc( getMarginTopBottomResponsive(false) * 3.5) getMarginLeftRightResponsive(false);
+        @include base-flex-rule(row);
+        margin: calc( margin-top-bottom(false) * 3.5) margin-left-right(false);
         justify-content: center;
         flex-wrap: wrap;
         .cnt-main {
-        @include createFlex(row);
+        @include base-flex-rule(row);
         justify-content: center;
         flex-wrap: wrap;    
         gap: 2%;

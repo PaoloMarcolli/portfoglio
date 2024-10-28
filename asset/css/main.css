@@ -98,50 +98,11 @@ h1 {
   display: none;
 }
 
-.woork-sheet-tab-header {
-  float: left;
-  border: 1px solid #ccc;
-  background-color: #000000 !important;
-  width: 30%;
-  height: 360px;
-  overflow-y: scroll;
-}
-.woork-sheet-tab-header button {
-  display: block;
-  background-color: inherit;
-  color: #FFFFFF !important;
-  padding: 22px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.woork-sheet-tab-header button:hover {
-  background-color: #181818;
-}
-.woork-sheet-tab-header button.active {
-  background-color: #fff !important;
-}
-.woork-sheet .cnt-woork-sheet {
-  float: left;
-  padding: 12px 12px;
-  border: 1px solid #fff !important;
-  width: 70%;
-  border-left: none;
-  height: 360px;
-  overflow-y: scroll;
-  background-color: #fff !important;
-  color: #000000 !important;
-}
-
-.woork-period {
+.cnt-main-item .cnt-curriculum .tabs-curriculum-period {
   overflow: hidden;
   border: 1px solid #ccc;
 }
-
-.woork-period button {
+.cnt-main-item .cnt-curriculum .tabs-curriculum-period button {
   background-color: inherit;
   float: left;
   border: none;
@@ -152,43 +113,52 @@ h1 {
   font-size: 17px;
   text-decoration: line-through;
 }
-
-.woork-period button:hover {
+.cnt-main-item .cnt-curriculum .tabs-curriculum-period button:hover {
   background-color: #181818;
 }
-
-.woork-period button.active {
+.cnt-main-item .cnt-curriculum .tabs-curriculum-period button.active {
   background-color: black;
   text-decoration: none;
   font-size: larger;
 }
-
-.cnt-woork-period {
+.cnt-main-item .cnt-curriculum .page-curriculum-period {
   display: none;
   border-top: none;
-  height: 100%;
+  overflow-y: scroll;
+  height: 350px;
+  background-color: #fff !important;
+  color: black;
+}
+.cnt-main-item .cnt-curriculum .page-curriculum-period-list-item {
+  border-bottom: black dotted 1px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px !important;
 }
 
-#projects .fl-projects-list {
+.cnt-main-item .cnt-projects-list {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px !important;
 }
-#projects .fl-projects-list-item {
+.cnt-main-item .cnt-projects-list-item {
   width: 46%;
 }
-#projects .fl-projects-list-item img {
+.cnt-main-item .cnt-projects-list-item img {
   width: 100%;
 }
 
-#who-i-am.cnt-main-item .who-i-am .cnt-scrolling-text {
+.cnt-main-item .who-i-am .cnt-scrolling-text {
   width: auto; /* Larghezza del contenitore */
   height: 100%; /* Altezza del contenitore */
   overflow: hidden; /* Nascondi il testo in eccesso */
 }
-#who-i-am.cnt-main-item .who-i-am .cnt-item-text {
+.cnt-main-item .who-i-am .cnt-item-text {
   border: 1px dotted red;
   animation: frm-scroll 5s linear infinite; /* Applica l'animazione */
   font-size: 0.7rem; /* Dimensione del testo */

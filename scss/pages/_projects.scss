@@ -1,5 +1,6 @@
-#projects .fl-projects-list {
-    @include createFlex(row);
+.cnt-main-item {
+  .cnt-projects-list {
+    @include base-flex-rule(row);
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px!important;
@@ -8,6 +9,6 @@
       img {
         width: 100%;
       }
+    }
   }
-  }
-  
+}
