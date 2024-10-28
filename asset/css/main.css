@@ -138,6 +138,9 @@ h1 {
   justify-content: flex-start;
   gap: 10px !important;
 }
+.cnt-main-item .cnt-curriculum .page-curriculum-period-list-item h5 {
+  margin-left: 10px;
+}
 
 .cnt-main-item .cnt-projects-list {
   display: flex;
