@@ -44,3 +44,8 @@ function openWorkSheetPeriod(evt, woorkSheetPeriodName) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpenWorkPeriod").click();
 
+function theFunction () {
+  document.getElementById("menu-btn").checked = ! document.getElementById("menu-btn").checked;
+  // return true or false, depending on whether you want to allow the `href` property to follow through or not
+}
+

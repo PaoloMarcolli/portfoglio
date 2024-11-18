@@ -103,7 +103,7 @@ img {
 
 // Media query when the screen is less than 1152px  ( MOBILE first default stylesheet )  
 .fl-page {
-  @include base-page-properties();
+  @include base-page-properties(true);
   @include base-flex-rule(column);
   align-items: center;
   width: 100%;
@@ -125,7 +125,7 @@ img {
 @media (min-width: 1024px){ 
     /* Layout structure ( using nesting SASS syntax ) */
     .fl-page {
-      @include base-page-properties();
+      @include base-page-properties(false);
 
       // Responsive header inherits rules from SCSS module
       .fl-header {

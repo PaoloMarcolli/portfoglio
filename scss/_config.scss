@@ -14,9 +14,10 @@ $primary-canvas-color: #212121;
 $secondary-canvas-color: #212121;
 /* Margins */
 $margin-default-left-rigth:2.5%;
-$margin-default-top-bottom:2.5%;
+$margin-default-top-bottom:0.5%;
 /* background-image */
-$background-image: url('../img/background-10.jpg');
+$background-image-normal: url('../img/background-11.jpg');
+$background-image-tile: url('../img/background-10.jpg');
 
 /* Mixin for test application */
 
@@ -43,9 +44,9 @@ $background-image: url('../img/background-10.jpg');
 @function margin-top-bottom($IsMobileDevice: true) {
     $margin: 0;
     @if $IsMobileDevice {
-        $margin: $margin-default-top-bottom;        
+        $margin: $margin-default-top-bottom * 5;        
     } @else {
-        $margin: $margin-default-top-bottom ;
+        $margin: $margin-default-top-bottom * 3;
     }
     @return $margin;
 }
@@ -61,13 +62,17 @@ $background-image: url('../img/background-10.jpg');
     background-color: transparent ;
 }
 /* Base color */  
-@mixin base-page-properties {
+@mixin base-page-properties($IsMobileDevice: true) {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
     height: 100vh;
     color: $primary-color;    
     background-color: #fff;
-    background: $background-image ;
+    @if $IsMobileDevice {
+        background: $background-image-tile ;
+    } @else {
+        background: $background-image-normal ;
+    }    
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: 100% 100%;    
